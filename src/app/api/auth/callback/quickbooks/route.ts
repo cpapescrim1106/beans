@@ -18,7 +18,7 @@ export const GET = async (request: Request) => {
     );
   }
 
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const storedState = cookieStore.get(STATE_COOKIE)?.value;
   if (!state || !storedState || state !== storedState) {
     return NextResponse.json({ error: "Invalid state" }, { status: 400 });
