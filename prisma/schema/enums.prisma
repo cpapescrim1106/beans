@@ -1,4 +1,22 @@
 enum Role {
   USER
   ADMIN
-} 
+}
+
+enum ReconciliationStatus {
+  PENDING
+  MATCHED
+  DISCREPANCY
+}
+
+enum SyncProvider {
+  MSC
+  QBO
+  BLUEPRINT
+}
+
+enum SyncStatus {
+  PENDING
+  SUCCESS
+  FAILURE
+}

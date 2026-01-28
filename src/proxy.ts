@@ -17,8 +17,9 @@ const proxy = auth((request: NextRequest & { auth: Session | null }) => {
   const isConnected = request.auth !== null;
   const userRole = request.auth?.user?.role;
 
-  const homeURL = new URL(Paths.HOME, request.nextUrl.origin);
-  const loginURLWithCallback = new URL(Paths.LOGIN, request.nextUrl.origin);
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? request.nextUrl.origin;
+  const homeURL = new URL(Paths.HOME, baseUrl);
+  const loginURLWithCallback = new URL(Paths.LOGIN, baseUrl);
   loginURLWithCallback.searchParams.set(
     "callbackUrl",
     request.nextUrl.pathname,
