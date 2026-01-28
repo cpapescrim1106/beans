@@ -1,6 +1,7 @@
 import BreadcrumbComponent from "@/components/breadcrumb-component";
 import { getPost } from "@/lib/services/post";
 import { notFound } from "next/navigation";
+export const dynamic = "force-dynamic";
 
 export default async function BreadcrumbSlot({
   params,

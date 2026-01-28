@@ -8,6 +8,8 @@ import Link from "next/link";
 import BlueprintReportTrigger from "./blueprint-report-trigger";
 import UserPostsList from "./user-posts-list";
 
+export const dynamic = "force-dynamic";
+
 const DashboardPage = async () => {
   const session = (await auth()) as Session;
   const initialSortOrder: SortOrder = "desc";

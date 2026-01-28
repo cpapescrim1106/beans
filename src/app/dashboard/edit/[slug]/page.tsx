@@ -6,6 +6,7 @@ import { PublishButton } from "@/components/publish-button";
 import { getCategories } from "@/lib/services/categories";
 import { getPost } from "@/lib/services/post";
 import { notFound } from "next/navigation";
+export const dynamic = "force-dynamic";
 
 const EditPostPage = async ({
   params,
