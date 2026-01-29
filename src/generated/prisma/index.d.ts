@@ -117,6 +117,16 @@ export const SyncStatus: {
 
 export type SyncStatus = (typeof SyncStatus)[keyof typeof SyncStatus]
 
+
+export const CategoryStatus: {
+  UNCHECKED: 'UNCHECKED',
+  CORRECT: 'CORRECT',
+  NEEDS_REVIEW: 'NEEDS_REVIEW',
+  FLAGGED: 'FLAGGED'
+};
+
+export type CategoryStatus = (typeof CategoryStatus)[keyof typeof CategoryStatus]
+
 }
 
 export type Role = $Enums.Role
@@ -134,6 +144,10 @@ export const SyncProvider: typeof $Enums.SyncProvider
 export type SyncStatus = $Enums.SyncStatus
 
 export const SyncStatus: typeof $Enums.SyncStatus
+
+export type CategoryStatus = $Enums.CategoryStatus
+
+export const CategoryStatus: typeof $Enums.CategoryStatus
 
 /**
  * ##  Prisma Client ʲˢ
@@ -7743,10 +7757,12 @@ export namespace Prisma {
 
   export type MscBatchAvgAggregateOutputType = {
     totalAmount: Decimal | null
+    discrepancyAmount: Decimal | null
   }
 
   export type MscBatchSumAggregateOutputType = {
     totalAmount: Decimal | null
+    discrepancyAmount: Decimal | null
   }
 
   export type MscBatchMinAggregateOutputType = {
@@ -7756,6 +7772,9 @@ export namespace Prisma {
     totalAmount: Decimal | null
     reconciliationStatus: $Enums.ReconciliationStatus | null
     reconciledAt: Date | null
+    discrepancyAmount: Decimal | null
+    discrepancyNotes: string | null
+    discrepancyResolved: boolean | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -7767,6 +7786,9 @@ export namespace Prisma {
     totalAmount: Decimal | null
     reconciliationStatus: $Enums.ReconciliationStatus | null
     reconciledAt: Date | null
+    discrepancyAmount: Decimal | null
+    discrepancyNotes: string | null
+    discrepancyResolved: boolean | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -7778,6 +7800,9 @@ export namespace Prisma {
     totalAmount: number
     reconciliationStatus: number
     reconciledAt: number
+    discrepancyAmount: number
+    discrepancyNotes: number
+    discrepancyResolved: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -7786,10 +7811,12 @@ export namespace Prisma {
 
   export type MscBatchAvgAggregateInputType = {
     totalAmount?: true
+    discrepancyAmount?: true
   }
 
   export type MscBatchSumAggregateInputType = {
     totalAmount?: true
+    discrepancyAmount?: true
   }
 
   export type MscBatchMinAggregateInputType = {
@@ -7799,6 +7826,9 @@ export namespace Prisma {
     totalAmount?: true
     reconciliationStatus?: true
     reconciledAt?: true
+    discrepancyAmount?: true
+    discrepancyNotes?: true
+    discrepancyResolved?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -7810,6 +7840,9 @@ export namespace Prisma {
     totalAmount?: true
     reconciliationStatus?: true
     reconciledAt?: true
+    discrepancyAmount?: true
+    discrepancyNotes?: true
+    discrepancyResolved?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -7821,6 +7854,9 @@ export namespace Prisma {
     totalAmount?: true
     reconciliationStatus?: true
     reconciledAt?: true
+    discrepancyAmount?: true
+    discrepancyNotes?: true
+    discrepancyResolved?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -7919,6 +7955,9 @@ export namespace Prisma {
     totalAmount: Decimal
     reconciliationStatus: $Enums.ReconciliationStatus
     reconciledAt: Date | null
+    discrepancyAmount: Decimal | null
+    discrepancyNotes: string | null
+    discrepancyResolved: boolean
     createdAt: Date
     updatedAt: Date
     _count: MscBatchCountAggregateOutputType | null
@@ -7949,6 +7988,9 @@ export namespace Prisma {
     totalAmount?: boolean
     reconciliationStatus?: boolean
     reconciledAt?: boolean
+    discrepancyAmount?: boolean
+    discrepancyNotes?: boolean
+    discrepancyResolved?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     qboDeposit?: boolean | MscBatch$qboDepositArgs<ExtArgs>
@@ -7964,6 +8006,9 @@ export namespace Prisma {
     totalAmount?: boolean
     reconciliationStatus?: boolean
     reconciledAt?: boolean
+    discrepancyAmount?: boolean
+    discrepancyNotes?: boolean
+    discrepancyResolved?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["mscBatch"]>
@@ -7975,6 +8020,9 @@ export namespace Prisma {
     totalAmount?: boolean
     reconciliationStatus?: boolean
     reconciledAt?: boolean
+    discrepancyAmount?: boolean
+    discrepancyNotes?: boolean
+    discrepancyResolved?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["mscBatch"]>
@@ -7986,11 +8034,14 @@ export namespace Prisma {
     totalAmount?: boolean
     reconciliationStatus?: boolean
     reconciledAt?: boolean
+    discrepancyAmount?: boolean
+    discrepancyNotes?: boolean
+    discrepancyResolved?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type MscBatchOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "externalId" | "batchDate" | "totalAmount" | "reconciliationStatus" | "reconciledAt" | "createdAt" | "updatedAt", ExtArgs["result"]["mscBatch"]>
+  export type MscBatchOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "externalId" | "batchDate" | "totalAmount" | "reconciliationStatus" | "reconciledAt" | "discrepancyAmount" | "discrepancyNotes" | "discrepancyResolved" | "createdAt" | "updatedAt", ExtArgs["result"]["mscBatch"]>
   export type MscBatchInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     qboDeposit?: boolean | MscBatch$qboDepositArgs<ExtArgs>
     blueprintTransactions?: boolean | MscBatch$blueprintTransactionsArgs<ExtArgs>
@@ -8014,6 +8065,9 @@ export namespace Prisma {
       totalAmount: Prisma.Decimal
       reconciliationStatus: $Enums.ReconciliationStatus
       reconciledAt: Date | null
+      discrepancyAmount: Prisma.Decimal | null
+      discrepancyNotes: string | null
+      discrepancyResolved: boolean
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["mscBatch"]>
@@ -8448,6 +8502,9 @@ export namespace Prisma {
     readonly totalAmount: FieldRef<"MscBatch", 'Decimal'>
     readonly reconciliationStatus: FieldRef<"MscBatch", 'ReconciliationStatus'>
     readonly reconciledAt: FieldRef<"MscBatch", 'DateTime'>
+    readonly discrepancyAmount: FieldRef<"MscBatch", 'Decimal'>
+    readonly discrepancyNotes: FieldRef<"MscBatch", 'String'>
+    readonly discrepancyResolved: FieldRef<"MscBatch", 'Boolean'>
     readonly createdAt: FieldRef<"MscBatch", 'DateTime'>
     readonly updatedAt: FieldRef<"MscBatch", 'DateTime'>
   }
@@ -8948,6 +9005,10 @@ export namespace Prisma {
     externalId: string | null
     depositDate: Date | null
     totalAmount: Decimal | null
+    category: string | null
+    expectedCategory: string | null
+    categoryStatus: $Enums.CategoryStatus | null
+    categoryNotes: string | null
     batchId: string | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -8958,6 +9019,10 @@ export namespace Prisma {
     externalId: string | null
     depositDate: Date | null
     totalAmount: Decimal | null
+    category: string | null
+    expectedCategory: string | null
+    categoryStatus: $Enums.CategoryStatus | null
+    categoryNotes: string | null
     batchId: string | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -8968,6 +9033,10 @@ export namespace Prisma {
     externalId: number
     depositDate: number
     totalAmount: number
+    category: number
+    expectedCategory: number
+    categoryStatus: number
+    categoryNotes: number
     batchId: number
     createdAt: number
     updatedAt: number
@@ -8988,6 +9057,10 @@ export namespace Prisma {
     externalId?: true
     depositDate?: true
     totalAmount?: true
+    category?: true
+    expectedCategory?: true
+    categoryStatus?: true
+    categoryNotes?: true
     batchId?: true
     createdAt?: true
     updatedAt?: true
@@ -8998,6 +9071,10 @@ export namespace Prisma {
     externalId?: true
     depositDate?: true
     totalAmount?: true
+    category?: true
+    expectedCategory?: true
+    categoryStatus?: true
+    categoryNotes?: true
     batchId?: true
     createdAt?: true
     updatedAt?: true
@@ -9008,6 +9085,10 @@ export namespace Prisma {
     externalId?: true
     depositDate?: true
     totalAmount?: true
+    category?: true
+    expectedCategory?: true
+    categoryStatus?: true
+    categoryNotes?: true
     batchId?: true
     createdAt?: true
     updatedAt?: true
@@ -9105,6 +9186,10 @@ export namespace Prisma {
     externalId: string | null
     depositDate: Date
     totalAmount: Decimal
+    category: string | null
+    expectedCategory: string | null
+    categoryStatus: $Enums.CategoryStatus
+    categoryNotes: string | null
     batchId: string | null
     createdAt: Date
     updatedAt: Date
@@ -9134,6 +9219,10 @@ export namespace Prisma {
     externalId?: boolean
     depositDate?: boolean
     totalAmount?: boolean
+    category?: boolean
+    expectedCategory?: boolean
+    categoryStatus?: boolean
+    categoryNotes?: boolean
     batchId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -9145,6 +9234,10 @@ export namespace Prisma {
     externalId?: boolean
     depositDate?: boolean
     totalAmount?: boolean
+    category?: boolean
+    expectedCategory?: boolean
+    categoryStatus?: boolean
+    categoryNotes?: boolean
     batchId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -9156,6 +9249,10 @@ export namespace Prisma {
     externalId?: boolean
     depositDate?: boolean
     totalAmount?: boolean
+    category?: boolean
+    expectedCategory?: boolean
+    categoryStatus?: boolean
+    categoryNotes?: boolean
     batchId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -9167,12 +9264,16 @@ export namespace Prisma {
     externalId?: boolean
     depositDate?: boolean
     totalAmount?: boolean
+    category?: boolean
+    expectedCategory?: boolean
+    categoryStatus?: boolean
+    categoryNotes?: boolean
     batchId?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type QboDepositOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "externalId" | "depositDate" | "totalAmount" | "batchId" | "createdAt" | "updatedAt", ExtArgs["result"]["qboDeposit"]>
+  export type QboDepositOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "externalId" | "depositDate" | "totalAmount" | "category" | "expectedCategory" | "categoryStatus" | "categoryNotes" | "batchId" | "createdAt" | "updatedAt", ExtArgs["result"]["qboDeposit"]>
   export type QboDepositInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     batch?: boolean | QboDeposit$batchArgs<ExtArgs>
   }
@@ -9193,6 +9294,10 @@ export namespace Prisma {
       externalId: string | null
       depositDate: Date
       totalAmount: Prisma.Decimal
+      category: string | null
+      expectedCategory: string | null
+      categoryStatus: $Enums.CategoryStatus
+      categoryNotes: string | null
       batchId: string | null
       createdAt: Date
       updatedAt: Date
@@ -9624,6 +9729,10 @@ export namespace Prisma {
     readonly externalId: FieldRef<"QboDeposit", 'String'>
     readonly depositDate: FieldRef<"QboDeposit", 'DateTime'>
     readonly totalAmount: FieldRef<"QboDeposit", 'Decimal'>
+    readonly category: FieldRef<"QboDeposit", 'String'>
+    readonly expectedCategory: FieldRef<"QboDeposit", 'String'>
+    readonly categoryStatus: FieldRef<"QboDeposit", 'CategoryStatus'>
+    readonly categoryNotes: FieldRef<"QboDeposit", 'String'>
     readonly batchId: FieldRef<"QboDeposit", 'String'>
     readonly createdAt: FieldRef<"QboDeposit", 'DateTime'>
     readonly updatedAt: FieldRef<"QboDeposit", 'DateTime'>
@@ -16764,6 +16873,9 @@ export namespace Prisma {
     totalAmount: 'totalAmount',
     reconciliationStatus: 'reconciliationStatus',
     reconciledAt: 'reconciledAt',
+    discrepancyAmount: 'discrepancyAmount',
+    discrepancyNotes: 'discrepancyNotes',
+    discrepancyResolved: 'discrepancyResolved',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -16776,6 +16888,10 @@ export namespace Prisma {
     externalId: 'externalId',
     depositDate: 'depositDate',
     totalAmount: 'totalAmount',
+    category: 'category',
+    expectedCategory: 'expectedCategory',
+    categoryStatus: 'categoryStatus',
+    categoryNotes: 'categoryNotes',
     batchId: 'batchId',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
@@ -16998,6 +17114,20 @@ export namespace Prisma {
    * Reference to a field of type 'ReconciliationStatus[]'
    */
   export type ListEnumReconciliationStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ReconciliationStatus[]'>
+    
+
+
+  /**
+   * Reference to a field of type 'CategoryStatus'
+   */
+  export type EnumCategoryStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'CategoryStatus'>
+    
+
+
+  /**
+   * Reference to a field of type 'CategoryStatus[]'
+   */
+  export type ListEnumCategoryStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'CategoryStatus[]'>
     
 
 
@@ -17423,6 +17553,9 @@ export namespace Prisma {
     totalAmount?: DecimalFilter<"MscBatch"> | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFilter<"MscBatch"> | $Enums.ReconciliationStatus
     reconciledAt?: DateTimeNullableFilter<"MscBatch"> | Date | string | null
+    discrepancyAmount?: DecimalNullableFilter<"MscBatch"> | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: StringNullableFilter<"MscBatch"> | string | null
+    discrepancyResolved?: BoolFilter<"MscBatch"> | boolean
     createdAt?: DateTimeFilter<"MscBatch"> | Date | string
     updatedAt?: DateTimeFilter<"MscBatch"> | Date | string
     qboDeposit?: XOR<QboDepositNullableScalarRelationFilter, QboDepositWhereInput> | null
@@ -17437,6 +17570,9 @@ export namespace Prisma {
     totalAmount?: SortOrder
     reconciliationStatus?: SortOrder
     reconciledAt?: SortOrderInput | SortOrder
+    discrepancyAmount?: SortOrderInput | SortOrder
+    discrepancyNotes?: SortOrderInput | SortOrder
+    discrepancyResolved?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     qboDeposit?: QboDepositOrderByWithRelationInput
@@ -17454,6 +17590,9 @@ export namespace Prisma {
     totalAmount?: DecimalFilter<"MscBatch"> | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFilter<"MscBatch"> | $Enums.ReconciliationStatus
     reconciledAt?: DateTimeNullableFilter<"MscBatch"> | Date | string | null
+    discrepancyAmount?: DecimalNullableFilter<"MscBatch"> | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: StringNullableFilter<"MscBatch"> | string | null
+    discrepancyResolved?: BoolFilter<"MscBatch"> | boolean
     createdAt?: DateTimeFilter<"MscBatch"> | Date | string
     updatedAt?: DateTimeFilter<"MscBatch"> | Date | string
     qboDeposit?: XOR<QboDepositNullableScalarRelationFilter, QboDepositWhereInput> | null
@@ -17468,6 +17607,9 @@ export namespace Prisma {
     totalAmount?: SortOrder
     reconciliationStatus?: SortOrder
     reconciledAt?: SortOrderInput | SortOrder
+    discrepancyAmount?: SortOrderInput | SortOrder
+    discrepancyNotes?: SortOrderInput | SortOrder
+    discrepancyResolved?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: MscBatchCountOrderByAggregateInput
@@ -17487,6 +17629,9 @@ export namespace Prisma {
     totalAmount?: DecimalWithAggregatesFilter<"MscBatch"> | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusWithAggregatesFilter<"MscBatch"> | $Enums.ReconciliationStatus
     reconciledAt?: DateTimeNullableWithAggregatesFilter<"MscBatch"> | Date | string | null
+    discrepancyAmount?: DecimalNullableWithAggregatesFilter<"MscBatch"> | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: StringNullableWithAggregatesFilter<"MscBatch"> | string | null
+    discrepancyResolved?: BoolWithAggregatesFilter<"MscBatch"> | boolean
     createdAt?: DateTimeWithAggregatesFilter<"MscBatch"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"MscBatch"> | Date | string
   }
@@ -17499,6 +17644,10 @@ export namespace Prisma {
     externalId?: StringNullableFilter<"QboDeposit"> | string | null
     depositDate?: DateTimeFilter<"QboDeposit"> | Date | string
     totalAmount?: DecimalFilter<"QboDeposit"> | Decimal | DecimalJsLike | number | string
+    category?: StringNullableFilter<"QboDeposit"> | string | null
+    expectedCategory?: StringNullableFilter<"QboDeposit"> | string | null
+    categoryStatus?: EnumCategoryStatusFilter<"QboDeposit"> | $Enums.CategoryStatus
+    categoryNotes?: StringNullableFilter<"QboDeposit"> | string | null
     batchId?: StringNullableFilter<"QboDeposit"> | string | null
     createdAt?: DateTimeFilter<"QboDeposit"> | Date | string
     updatedAt?: DateTimeFilter<"QboDeposit"> | Date | string
@@ -17510,6 +17659,10 @@ export namespace Prisma {
     externalId?: SortOrderInput | SortOrder
     depositDate?: SortOrder
     totalAmount?: SortOrder
+    category?: SortOrderInput | SortOrder
+    expectedCategory?: SortOrderInput | SortOrder
+    categoryStatus?: SortOrder
+    categoryNotes?: SortOrderInput | SortOrder
     batchId?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -17525,6 +17678,10 @@ export namespace Prisma {
     NOT?: QboDepositWhereInput | QboDepositWhereInput[]
     depositDate?: DateTimeFilter<"QboDeposit"> | Date | string
     totalAmount?: DecimalFilter<"QboDeposit"> | Decimal | DecimalJsLike | number | string
+    category?: StringNullableFilter<"QboDeposit"> | string | null
+    expectedCategory?: StringNullableFilter<"QboDeposit"> | string | null
+    categoryStatus?: EnumCategoryStatusFilter<"QboDeposit"> | $Enums.CategoryStatus
+    categoryNotes?: StringNullableFilter<"QboDeposit"> | string | null
     createdAt?: DateTimeFilter<"QboDeposit"> | Date | string
     updatedAt?: DateTimeFilter<"QboDeposit"> | Date | string
     batch?: XOR<MscBatchNullableScalarRelationFilter, MscBatchWhereInput> | null
@@ -17535,6 +17692,10 @@ export namespace Prisma {
     externalId?: SortOrderInput | SortOrder
     depositDate?: SortOrder
     totalAmount?: SortOrder
+    category?: SortOrderInput | SortOrder
+    expectedCategory?: SortOrderInput | SortOrder
+    categoryStatus?: SortOrder
+    categoryNotes?: SortOrderInput | SortOrder
     batchId?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -17553,6 +17714,10 @@ export namespace Prisma {
     externalId?: StringNullableWithAggregatesFilter<"QboDeposit"> | string | null
     depositDate?: DateTimeWithAggregatesFilter<"QboDeposit"> | Date | string
     totalAmount?: DecimalWithAggregatesFilter<"QboDeposit"> | Decimal | DecimalJsLike | number | string
+    category?: StringNullableWithAggregatesFilter<"QboDeposit"> | string | null
+    expectedCategory?: StringNullableWithAggregatesFilter<"QboDeposit"> | string | null
+    categoryStatus?: EnumCategoryStatusWithAggregatesFilter<"QboDeposit"> | $Enums.CategoryStatus
+    categoryNotes?: StringNullableWithAggregatesFilter<"QboDeposit"> | string | null
     batchId?: StringNullableWithAggregatesFilter<"QboDeposit"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"QboDeposit"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"QboDeposit"> | Date | string
@@ -18357,6 +18522,9 @@ export namespace Prisma {
     totalAmount: Decimal | DecimalJsLike | number | string
     reconciliationStatus?: $Enums.ReconciliationStatus
     reconciledAt?: Date | string | null
+    discrepancyAmount?: Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: string | null
+    discrepancyResolved?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
     qboDeposit?: QboDepositCreateNestedOneWithoutBatchInput
@@ -18371,6 +18539,9 @@ export namespace Prisma {
     totalAmount: Decimal | DecimalJsLike | number | string
     reconciliationStatus?: $Enums.ReconciliationStatus
     reconciledAt?: Date | string | null
+    discrepancyAmount?: Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: string | null
+    discrepancyResolved?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
     qboDeposit?: QboDepositUncheckedCreateNestedOneWithoutBatchInput
@@ -18385,6 +18556,9 @@ export namespace Prisma {
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFieldUpdateOperationsInput | $Enums.ReconciliationStatus
     reconciledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    discrepancyAmount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    discrepancyResolved?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     qboDeposit?: QboDepositUpdateOneWithoutBatchNestedInput
@@ -18399,6 +18573,9 @@ export namespace Prisma {
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFieldUpdateOperationsInput | $Enums.ReconciliationStatus
     reconciledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    discrepancyAmount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    discrepancyResolved?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     qboDeposit?: QboDepositUncheckedUpdateOneWithoutBatchNestedInput
@@ -18413,6 +18590,9 @@ export namespace Prisma {
     totalAmount: Decimal | DecimalJsLike | number | string
     reconciliationStatus?: $Enums.ReconciliationStatus
     reconciledAt?: Date | string | null
+    discrepancyAmount?: Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: string | null
+    discrepancyResolved?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -18424,6 +18604,9 @@ export namespace Prisma {
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFieldUpdateOperationsInput | $Enums.ReconciliationStatus
     reconciledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    discrepancyAmount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    discrepancyResolved?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -18435,6 +18618,9 @@ export namespace Prisma {
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFieldUpdateOperationsInput | $Enums.ReconciliationStatus
     reconciledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    discrepancyAmount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    discrepancyResolved?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -18444,6 +18630,10 @@ export namespace Prisma {
     externalId?: string | null
     depositDate: Date | string
     totalAmount: Decimal | DecimalJsLike | number | string
+    category?: string | null
+    expectedCategory?: string | null
+    categoryStatus?: $Enums.CategoryStatus
+    categoryNotes?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     batch?: MscBatchCreateNestedOneWithoutQboDepositInput
@@ -18454,6 +18644,10 @@ export namespace Prisma {
     externalId?: string | null
     depositDate: Date | string
     totalAmount: Decimal | DecimalJsLike | number | string
+    category?: string | null
+    expectedCategory?: string | null
+    categoryStatus?: $Enums.CategoryStatus
+    categoryNotes?: string | null
     batchId?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -18464,6 +18658,10 @@ export namespace Prisma {
     externalId?: NullableStringFieldUpdateOperationsInput | string | null
     depositDate?: DateTimeFieldUpdateOperationsInput | Date | string
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    expectedCategory?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryStatus?: EnumCategoryStatusFieldUpdateOperationsInput | $Enums.CategoryStatus
+    categoryNotes?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     batch?: MscBatchUpdateOneWithoutQboDepositNestedInput
@@ -18474,6 +18672,10 @@ export namespace Prisma {
     externalId?: NullableStringFieldUpdateOperationsInput | string | null
     depositDate?: DateTimeFieldUpdateOperationsInput | Date | string
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    expectedCategory?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryStatus?: EnumCategoryStatusFieldUpdateOperationsInput | $Enums.CategoryStatus
+    categoryNotes?: NullableStringFieldUpdateOperationsInput | string | null
     batchId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -18484,6 +18686,10 @@ export namespace Prisma {
     externalId?: string | null
     depositDate: Date | string
     totalAmount: Decimal | DecimalJsLike | number | string
+    category?: string | null
+    expectedCategory?: string | null
+    categoryStatus?: $Enums.CategoryStatus
+    categoryNotes?: string | null
     batchId?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -18494,6 +18700,10 @@ export namespace Prisma {
     externalId?: NullableStringFieldUpdateOperationsInput | string | null
     depositDate?: DateTimeFieldUpdateOperationsInput | Date | string
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    expectedCategory?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryStatus?: EnumCategoryStatusFieldUpdateOperationsInput | $Enums.CategoryStatus
+    categoryNotes?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -18503,6 +18713,10 @@ export namespace Prisma {
     externalId?: NullableStringFieldUpdateOperationsInput | string | null
     depositDate?: DateTimeFieldUpdateOperationsInput | Date | string
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    expectedCategory?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryStatus?: EnumCategoryStatusFieldUpdateOperationsInput | $Enums.CategoryStatus
+    categoryNotes?: NullableStringFieldUpdateOperationsInput | string | null
     batchId?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -19403,6 +19617,17 @@ export namespace Prisma {
     not?: NestedEnumReconciliationStatusFilter<$PrismaModel> | $Enums.ReconciliationStatus
   }
 
+  export type DecimalNullableFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | null
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | null
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | null
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalNullableFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string | null
+  }
+
   export type QboDepositNullableScalarRelationFilter = {
     is?: QboDepositWhereInput | null
     isNot?: QboDepositWhereInput | null
@@ -19435,12 +19660,16 @@ export namespace Prisma {
     totalAmount?: SortOrder
     reconciliationStatus?: SortOrder
     reconciledAt?: SortOrder
+    discrepancyAmount?: SortOrder
+    discrepancyNotes?: SortOrder
+    discrepancyResolved?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
   export type MscBatchAvgOrderByAggregateInput = {
     totalAmount?: SortOrder
+    discrepancyAmount?: SortOrder
   }
 
   export type MscBatchMaxOrderByAggregateInput = {
@@ -19450,6 +19679,9 @@ export namespace Prisma {
     totalAmount?: SortOrder
     reconciliationStatus?: SortOrder
     reconciledAt?: SortOrder
+    discrepancyAmount?: SortOrder
+    discrepancyNotes?: SortOrder
+    discrepancyResolved?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -19461,12 +19693,16 @@ export namespace Prisma {
     totalAmount?: SortOrder
     reconciliationStatus?: SortOrder
     reconciledAt?: SortOrder
+    discrepancyAmount?: SortOrder
+    discrepancyNotes?: SortOrder
+    discrepancyResolved?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
 
   export type MscBatchSumOrderByAggregateInput = {
     totalAmount?: SortOrder
+    discrepancyAmount?: SortOrder
   }
 
   export type DecimalWithAggregatesFilter<$PrismaModel = never> = {
@@ -19495,6 +19731,29 @@ export namespace Prisma {
     _max?: NestedEnumReconciliationStatusFilter<$PrismaModel>
   }
 
+  export type DecimalNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | null
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | null
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | null
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalNullableWithAggregatesFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedDecimalNullableFilter<$PrismaModel>
+    _sum?: NestedDecimalNullableFilter<$PrismaModel>
+    _min?: NestedDecimalNullableFilter<$PrismaModel>
+    _max?: NestedDecimalNullableFilter<$PrismaModel>
+  }
+
+  export type EnumCategoryStatusFilter<$PrismaModel = never> = {
+    equals?: $Enums.CategoryStatus | EnumCategoryStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.CategoryStatus[] | ListEnumCategoryStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.CategoryStatus[] | ListEnumCategoryStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumCategoryStatusFilter<$PrismaModel> | $Enums.CategoryStatus
+  }
+
   export type MscBatchNullableScalarRelationFilter = {
     is?: MscBatchWhereInput | null
     isNot?: MscBatchWhereInput | null
@@ -19505,6 +19764,10 @@ export namespace Prisma {
     externalId?: SortOrder
     depositDate?: SortOrder
     totalAmount?: SortOrder
+    category?: SortOrder
+    expectedCategory?: SortOrder
+    categoryStatus?: SortOrder
+    categoryNotes?: SortOrder
     batchId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -19519,6 +19782,10 @@ export namespace Prisma {
     externalId?: SortOrder
     depositDate?: SortOrder
     totalAmount?: SortOrder
+    category?: SortOrder
+    expectedCategory?: SortOrder
+    categoryStatus?: SortOrder
+    categoryNotes?: SortOrder
     batchId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -19529,6 +19796,10 @@ export namespace Prisma {
     externalId?: SortOrder
     depositDate?: SortOrder
     totalAmount?: SortOrder
+    category?: SortOrder
+    expectedCategory?: SortOrder
+    categoryStatus?: SortOrder
+    categoryNotes?: SortOrder
     batchId?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -19536,6 +19807,16 @@ export namespace Prisma {
 
   export type QboDepositSumOrderByAggregateInput = {
     totalAmount?: SortOrder
+  }
+
+  export type EnumCategoryStatusWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.CategoryStatus | EnumCategoryStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.CategoryStatus[] | ListEnumCategoryStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.CategoryStatus[] | ListEnumCategoryStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumCategoryStatusWithAggregatesFilter<$PrismaModel> | $Enums.CategoryStatus
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumCategoryStatusFilter<$PrismaModel>
+    _max?: NestedEnumCategoryStatusFilter<$PrismaModel>
   }
 
   export type BlueprintTransactionCountOrderByAggregateInput = {
@@ -20146,6 +20427,14 @@ export namespace Prisma {
     set?: $Enums.ReconciliationStatus
   }
 
+  export type NullableDecimalFieldUpdateOperationsInput = {
+    set?: Decimal | DecimalJsLike | number | string | null
+    increment?: Decimal | DecimalJsLike | number | string
+    decrement?: Decimal | DecimalJsLike | number | string
+    multiply?: Decimal | DecimalJsLike | number | string
+    divide?: Decimal | DecimalJsLike | number | string
+  }
+
   export type QboDepositUpdateOneWithoutBatchNestedInput = {
     create?: XOR<QboDepositCreateWithoutBatchInput, QboDepositUncheckedCreateWithoutBatchInput>
     connectOrCreate?: QboDepositCreateOrConnectWithoutBatchInput
@@ -20226,6 +20515,10 @@ export namespace Prisma {
     create?: XOR<MscBatchCreateWithoutQboDepositInput, MscBatchUncheckedCreateWithoutQboDepositInput>
     connectOrCreate?: MscBatchCreateOrConnectWithoutQboDepositInput
     connect?: MscBatchWhereUniqueInput
+  }
+
+  export type EnumCategoryStatusFieldUpdateOperationsInput = {
+    set?: $Enums.CategoryStatus
   }
 
   export type MscBatchUpdateOneWithoutQboDepositNestedInput = {
@@ -20640,6 +20933,17 @@ export namespace Prisma {
     not?: NestedEnumReconciliationStatusFilter<$PrismaModel> | $Enums.ReconciliationStatus
   }
 
+  export type NestedDecimalNullableFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | null
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | null
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | null
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalNullableFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string | null
+  }
+
   export type NestedDecimalWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
     in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
@@ -20664,6 +20968,39 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedEnumReconciliationStatusFilter<$PrismaModel>
     _max?: NestedEnumReconciliationStatusFilter<$PrismaModel>
+  }
+
+  export type NestedDecimalNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | null
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | null
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | null
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalNullableWithAggregatesFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedDecimalNullableFilter<$PrismaModel>
+    _sum?: NestedDecimalNullableFilter<$PrismaModel>
+    _min?: NestedDecimalNullableFilter<$PrismaModel>
+    _max?: NestedDecimalNullableFilter<$PrismaModel>
+  }
+
+  export type NestedEnumCategoryStatusFilter<$PrismaModel = never> = {
+    equals?: $Enums.CategoryStatus | EnumCategoryStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.CategoryStatus[] | ListEnumCategoryStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.CategoryStatus[] | ListEnumCategoryStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumCategoryStatusFilter<$PrismaModel> | $Enums.CategoryStatus
+  }
+
+  export type NestedEnumCategoryStatusWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: $Enums.CategoryStatus | EnumCategoryStatusFieldRefInput<$PrismaModel>
+    in?: $Enums.CategoryStatus[] | ListEnumCategoryStatusFieldRefInput<$PrismaModel>
+    notIn?: $Enums.CategoryStatus[] | ListEnumCategoryStatusFieldRefInput<$PrismaModel>
+    not?: NestedEnumCategoryStatusWithAggregatesFilter<$PrismaModel> | $Enums.CategoryStatus
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedEnumCategoryStatusFilter<$PrismaModel>
+    _max?: NestedEnumCategoryStatusFilter<$PrismaModel>
   }
 
   export type NestedEnumSyncProviderFilter<$PrismaModel = never> = {
@@ -21207,6 +21544,10 @@ export namespace Prisma {
     externalId?: string | null
     depositDate: Date | string
     totalAmount: Decimal | DecimalJsLike | number | string
+    category?: string | null
+    expectedCategory?: string | null
+    categoryStatus?: $Enums.CategoryStatus
+    categoryNotes?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -21216,6 +21557,10 @@ export namespace Prisma {
     externalId?: string | null
     depositDate: Date | string
     totalAmount: Decimal | DecimalJsLike | number | string
+    category?: string | null
+    expectedCategory?: string | null
+    categoryStatus?: $Enums.CategoryStatus
+    categoryNotes?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -21307,6 +21652,10 @@ export namespace Prisma {
     externalId?: NullableStringFieldUpdateOperationsInput | string | null
     depositDate?: DateTimeFieldUpdateOperationsInput | Date | string
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    expectedCategory?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryStatus?: EnumCategoryStatusFieldUpdateOperationsInput | $Enums.CategoryStatus
+    categoryNotes?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -21316,6 +21665,10 @@ export namespace Prisma {
     externalId?: NullableStringFieldUpdateOperationsInput | string | null
     depositDate?: DateTimeFieldUpdateOperationsInput | Date | string
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    expectedCategory?: NullableStringFieldUpdateOperationsInput | string | null
+    categoryStatus?: EnumCategoryStatusFieldUpdateOperationsInput | $Enums.CategoryStatus
+    categoryNotes?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -21390,6 +21743,9 @@ export namespace Prisma {
     totalAmount: Decimal | DecimalJsLike | number | string
     reconciliationStatus?: $Enums.ReconciliationStatus
     reconciledAt?: Date | string | null
+    discrepancyAmount?: Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: string | null
+    discrepancyResolved?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
     blueprintTransactions?: BlueprintTransactionCreateNestedManyWithoutBatchInput
@@ -21403,6 +21759,9 @@ export namespace Prisma {
     totalAmount: Decimal | DecimalJsLike | number | string
     reconciliationStatus?: $Enums.ReconciliationStatus
     reconciledAt?: Date | string | null
+    discrepancyAmount?: Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: string | null
+    discrepancyResolved?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
     blueprintTransactions?: BlueprintTransactionUncheckedCreateNestedManyWithoutBatchInput
@@ -21432,6 +21791,9 @@ export namespace Prisma {
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFieldUpdateOperationsInput | $Enums.ReconciliationStatus
     reconciledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    discrepancyAmount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    discrepancyResolved?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     blueprintTransactions?: BlueprintTransactionUpdateManyWithoutBatchNestedInput
@@ -21445,6 +21807,9 @@ export namespace Prisma {
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFieldUpdateOperationsInput | $Enums.ReconciliationStatus
     reconciledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    discrepancyAmount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    discrepancyResolved?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     blueprintTransactions?: BlueprintTransactionUncheckedUpdateManyWithoutBatchNestedInput
@@ -21458,6 +21823,9 @@ export namespace Prisma {
     totalAmount: Decimal | DecimalJsLike | number | string
     reconciliationStatus?: $Enums.ReconciliationStatus
     reconciledAt?: Date | string | null
+    discrepancyAmount?: Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: string | null
+    discrepancyResolved?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
     qboDeposit?: QboDepositCreateNestedOneWithoutBatchInput
@@ -21471,6 +21839,9 @@ export namespace Prisma {
     totalAmount: Decimal | DecimalJsLike | number | string
     reconciliationStatus?: $Enums.ReconciliationStatus
     reconciledAt?: Date | string | null
+    discrepancyAmount?: Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: string | null
+    discrepancyResolved?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
     qboDeposit?: QboDepositUncheckedCreateNestedOneWithoutBatchInput
@@ -21500,6 +21871,9 @@ export namespace Prisma {
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFieldUpdateOperationsInput | $Enums.ReconciliationStatus
     reconciledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    discrepancyAmount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    discrepancyResolved?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     qboDeposit?: QboDepositUpdateOneWithoutBatchNestedInput
@@ -21513,6 +21887,9 @@ export namespace Prisma {
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFieldUpdateOperationsInput | $Enums.ReconciliationStatus
     reconciledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    discrepancyAmount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    discrepancyResolved?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     qboDeposit?: QboDepositUncheckedUpdateOneWithoutBatchNestedInput
@@ -21526,6 +21903,9 @@ export namespace Prisma {
     totalAmount: Decimal | DecimalJsLike | number | string
     reconciliationStatus?: $Enums.ReconciliationStatus
     reconciledAt?: Date | string | null
+    discrepancyAmount?: Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: string | null
+    discrepancyResolved?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
     qboDeposit?: QboDepositCreateNestedOneWithoutBatchInput
@@ -21539,6 +21919,9 @@ export namespace Prisma {
     totalAmount: Decimal | DecimalJsLike | number | string
     reconciliationStatus?: $Enums.ReconciliationStatus
     reconciledAt?: Date | string | null
+    discrepancyAmount?: Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: string | null
+    discrepancyResolved?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
     qboDeposit?: QboDepositUncheckedCreateNestedOneWithoutBatchInput
@@ -21568,6 +21951,9 @@ export namespace Prisma {
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFieldUpdateOperationsInput | $Enums.ReconciliationStatus
     reconciledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    discrepancyAmount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    discrepancyResolved?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     qboDeposit?: QboDepositUpdateOneWithoutBatchNestedInput
@@ -21581,6 +21967,9 @@ export namespace Prisma {
     totalAmount?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     reconciliationStatus?: EnumReconciliationStatusFieldUpdateOperationsInput | $Enums.ReconciliationStatus
     reconciledAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    discrepancyAmount?: NullableDecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string | null
+    discrepancyNotes?: NullableStringFieldUpdateOperationsInput | string | null
+    discrepancyResolved?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     qboDeposit?: QboDepositUncheckedUpdateOneWithoutBatchNestedInput

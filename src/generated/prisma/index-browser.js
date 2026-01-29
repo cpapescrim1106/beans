@@ -180,6 +180,9 @@ exports.Prisma.MscBatchScalarFieldEnum = {
   totalAmount: 'totalAmount',
   reconciliationStatus: 'reconciliationStatus',
   reconciledAt: 'reconciledAt',
+  discrepancyAmount: 'discrepancyAmount',
+  discrepancyNotes: 'discrepancyNotes',
+  discrepancyResolved: 'discrepancyResolved',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -189,6 +192,10 @@ exports.Prisma.QboDepositScalarFieldEnum = {
   externalId: 'externalId',
   depositDate: 'depositDate',
   totalAmount: 'totalAmount',
+  category: 'category',
+  expectedCategory: 'expectedCategory',
+  categoryStatus: 'categoryStatus',
+  categoryNotes: 'categoryNotes',
   batchId: 'batchId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
@@ -290,6 +297,13 @@ exports.ReconciliationStatus = exports.$Enums.ReconciliationStatus = {
   PENDING: 'PENDING',
   MATCHED: 'MATCHED',
   DISCREPANCY: 'DISCREPANCY'
+};
+
+exports.CategoryStatus = exports.$Enums.CategoryStatus = {
+  UNCHECKED: 'UNCHECKED',
+  CORRECT: 'CORRECT',
+  NEEDS_REVIEW: 'NEEDS_REVIEW',
+  FLAGGED: 'FLAGGED'
 };
 
 exports.SyncProvider = exports.$Enums.SyncProvider = {

@@ -95,6 +95,13 @@ enum SyncStatus {
   FAILURE
 }
 
+enum CategoryStatus {
+  UNCHECKED
+  CORRECT
+  NEEDS_REVIEW
+  FLAGGED
+}
+
 model MscBatch {
   id                   String               @id @default(cuid())
   externalId           String?              @unique
@@ -102,6 +109,11 @@ model MscBatch {
   totalAmount          Decimal              @db.Decimal(12, 2)
   reconciliationStatus ReconciliationStatus @default(PENDING)
   reconciledAt         DateTime?
+
+  // Discrepancy tracking (BP transactions vs batch total)
+  discrepancyAmount   Decimal? @db.Decimal(12, 2)
+  discrepancyNotes    String?  @db.Text
+  discrepancyResolved Boolean  @default(false)
 
   qboDeposit            QboDeposit?
   blueprintTransactions BlueprintTransaction[]
@@ -120,6 +132,12 @@ model QboDeposit {
   externalId  String?  @unique
   depositDate DateTime
   totalAmount Decimal  @db.Decimal(12, 2)
+
+  // Category tracking from QBO
+  category         String?        @db.VarChar(255)
+  expectedCategory String?        @db.VarChar(255)
+  categoryStatus   CategoryStatus @default(UNCHECKED)
+  categoryNotes    String?        @db.Text
 
   batchId String?   @unique
   batch   MscBatch? @relation(fields: [batchId], references: [id], onDelete: SetNull, onUpdate: Restrict)

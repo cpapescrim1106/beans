@@ -41,7 +41,10 @@ const DashboardPage = async () => {
         <h2 className="text-xl font-semibold mb-4">Quick Actions</h2>
         <div className="flex flex-wrap gap-4">
           <Button asChild>
-            <Link href="/dashboard/reconciliation">View Reconciliation</Link>
+            <Link href="/dashboard/reconciliation/daily">Daily Reconciliation</Link>
+          </Button>
+          <Button variant="outline" asChild>
+            <Link href="/dashboard/reconciliation">Batch List</Link>
           </Button>
           {qboConnected ? (
             <Button variant="outline" disabled>
