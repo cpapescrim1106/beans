@@ -194,23 +194,40 @@ export async function importBlueprintTransactions(
       },
     });
 
-    const transaction = await prisma.blueprintTransaction.upsert({
-      where: { externalId: tx.externalId },
-      create: {
-        externalId: tx.externalId,
-        transactionDate: tx.transactionDate,
-        amount: tx.amount,
-        description: tx.description,
-        batchId: batch?.id,
-      },
-      update: {
-        transactionDate: tx.transactionDate,
-        amount: tx.amount,
-        description: tx.description,
-        // Only link if not already linked
-        batchId: batch?.id,
-      },
-    });
+    let transaction;
+    if (batch) {
+      transaction = await prisma.blueprintTransaction.upsert({
+        where: { externalId: tx.externalId },
+        create: {
+          externalId: tx.externalId,
+          transactionDate: tx.transactionDate,
+          amount: tx.amount,
+          description: tx.description,
+          batch: { connect: { id: batch.id } },
+        },
+        update: {
+          transactionDate: tx.transactionDate,
+          amount: tx.amount,
+          description: tx.description,
+          batch: { connect: { id: batch.id } },
+        },
+      });
+    } else {
+      transaction = await prisma.blueprintTransaction.upsert({
+        where: { externalId: tx.externalId },
+        create: {
+          externalId: tx.externalId,
+          transactionDate: tx.transactionDate,
+          amount: tx.amount,
+          description: tx.description,
+        },
+        update: {
+          transactionDate: tx.transactionDate,
+          amount: tx.amount,
+          description: tx.description,
+        },
+      });
+    }
 
     imported++;
     if (transaction.batchId) linked++;

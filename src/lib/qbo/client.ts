@@ -40,7 +40,7 @@ interface QboDeposit {
 
 interface QboQueryResponse<T> {
   QueryResponse: {
-    [key: string]: T[];
+    [key: string]: T[] | number | undefined;
     startPosition: number;
     maxResults: number;
     totalCount?: number;
@@ -161,7 +161,7 @@ export class QboClient {
     const response = await this.request<QboQueryResponse<T>>(
       `/query?query=${encoded}`
     );
-    return response.QueryResponse[entity] || [];
+    return (response.QueryResponse[entity] as T[] | undefined) || [];
   }
 
   /**
