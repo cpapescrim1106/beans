@@ -1,0 +1,12 @@
+Launching OMS client with relay agent...
+  JAVA_HOME: /Users/chris/Documents/BlueprintProject/jdk8u462-b08/Contents/Home
+  Agent:     /Users/chris/Documents/BlueprintProject/relay-agent/build/blueprint-relay-agent.jar
+  Log file:  /Users/chris/Documents/BlueprintProject/BlueprintRelay.log
+  Classpath: /Users/chris/Documents/BlueprintProject/client_classpath_jws.txt
+  Service URL: https://us-cdn1.aws.bp-solutions.net/us_est6/FL/acc
+  Extra VM opts: -Dsun.java2d.fontpath=/System/Library/Fonts:/Library/Fonts -Dswing.defaultlaf=javax.swing.plaf.metal.MetalLookAndFeel
+
+[RelayAgent] Blueprint relay agent starting (args: )
+[RelayAgent] Installed package logger for com.blueprint.oms.a.a.*
+[RelayAgent] Installed AWS provider logger for software.amazon.awssdk.auth.credentials.*
+Error: Could not find or load main class com.blueprint.oms.gui.OMSClient

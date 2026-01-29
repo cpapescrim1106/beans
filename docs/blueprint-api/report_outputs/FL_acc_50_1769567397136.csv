@@ -1,0 +1,5 @@
+Location,Txn Type,Date,Txn ID,Payment method,Provider,Patient/Insurer,Patient ID,Applied to Patient,Applied to,Date (applied txn),Item,Memo,Patient-created referral source,Patient-created referrer type,Amount,
+SHD,Payment,21/01/2026,5414,MasterCard,"Pape, Chris","Nading, John",4130,"Nading, John",INV 16928,21/01/2026,Extended Warranty,extended warranty,Walk-in,Other (Paid),$198.00,
+SHD,Payment,23/01/2026,5415,Visa,"Pape, Chris","Roberts, Deborah",10079,"Roberts, Deborah",INV 16943,23/01/2026,Office Visit,,Google,Website/Social Media,$165.00,
+SHD,Payment,26/01/2026,5416,Visa,,"Kieffer, Peter W",9118,"Kieffer, Peter W",,,,earmolds,Sign/Billboard,Other (Paid),$250.00,
+SHD,Payment,26/01/2026,5417,MasterCard,,"Stelmas, Judy",8769,"Stelmas, Judy",INV 16945,26/01/2026,Oticon Lithium Ion,left battery,Google,Website/Social Media,$100.00,

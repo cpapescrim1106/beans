@@ -1,0 +1,134 @@
+Launching OMS client with relay agent...
+  JAVA_HOME: /Users/chris/Documents/BlueprintProject/jdk8u462-b08/Contents/Home
+  Agent:     /Users/chris/Documents/BlueprintProject/relay-agent/build/blueprint-relay-agent.jar
+  Log file:  /Users/chris/Documents/BlueprintProject/BlueprintRelay.log
+  Classpath: /Users/chris/Documents/BlueprintProject/client_classpath_jws.txt
+  Service URL: https://us-cdn1.aws.bp-solutions.net/us_est6/FL/acc
+  Extra VM opts: -Dsun.java2d.fontpath=/System/Library/Fonts:/Library/Fonts -Dswing.defaultlaf=javax.swing.plaf.metal.MetalLookAndFeel
+
+[RelayAgent] Blueprint relay agent starting (args: )
+[RelayAgent] Installed package logger for com.blueprint.oms.a.a.*
+[RelayAgent] Installed AWS provider logger for software.amazon.awssdk.auth.credentials.*
+[RelayAgent] Detected OMSClient class load, kicking off context watcher
+2026-01-27 20:28:03.314 INFO  [main] com.blueprint.oms.gui.OMSClient - loading spring configuration...
+2026-01-27 20:28:03.556 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/springClientContext.xml]
+[RelayAgent] Spring context detected: org.springframework.context.support.GenericApplicationContext
+[RelayAgent] Failed to register context listener: null
+[RelayAgent] Waiting for Spring context refresh to complete
+[RelayAgent] getBeanFactory succeeded, assuming context is active
+[RelayAgent] Context exposes 0 beans, first 0: []
+[RelayAgent] Failed to resolve omsController bean: No bean named 'omsController' is defined (org.springframework.beans.factory.NoSuchBeanDefinitionException)
+[RelayAgent] Attempt 1 to resolve bean 'omsController'
+[RelayAgent] Bean resolution attempt 1 failed: No bean named 'omsController' is defined (org.springframework.beans.factory.NoSuchBeanDefinitionException)
+2026-01-27 20:28:04.238 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]
+[RelayAgent] Attempt 2 to resolve bean 'omsController'
+[RelayAgent] Bean resolution attempt 2 failed: No bean named 'omsController' is defined (org.springframework.beans.factory.NoSuchBeanDefinitionException)
+2026-01-27 20:28:04.573 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/noah.xml]
+2026-01-27 20:28:04.644 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]
+2026-01-27 20:28:04.773 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]
+2026-01-27 20:28:04.836 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US_hcfa.xml]
+[RelayAgent] Attempt 3 to resolve bean 'omsController'
+[RelayAgent] Bean resolution attempt 3 failed: Error creating bean with name 'omsController' defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]: Cannot resolve reference to bean 'serverURL' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serverURL' defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [java.net.URL]: Constructor threw exception; nested exception is java.net.MalformedURLException: no protocol: ${SERVICE_URL:https://us-cdn1.aws.bp-solutions.net/us_est6/FL/acc} (org.springframework.beans.factory.BeanCreationException)
+2026-01-27 20:28:05.124 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'clientForms': replacing [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US_hcfa.xml]]
+2026-01-27 20:28:05.130 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'clientWriteOff': replacing [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 20:28:05.137 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'insurerWriteOff': replacing [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 20:28:05.139 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'repairOrder': replacing [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 20:28:05.139 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'clientForms': replacing [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US_hcfa.xml]] with [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 20:28:05.139 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'codeVersion': replacing [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]] with [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/springClientContext.xml]]
+2026-01-27 20:28:05.139 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'bplinkCodeVersion': replacing [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]] with [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/springClientContext.xml]]
+2026-01-27 20:28:05.145 INFO  [main] org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@17a7f733: startup date [Tue Jan 27 20:28:05 EST 2026]; root of context hierarchy
+2026-01-27 20:28:05.435 INFO  [main] org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/clientConfig_generic.properties]
+2026-01-27 20:28:05.446 INFO  [main] org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/clientConfig_base.properties]
+2026-01-27 20:28:05.449 INFO  [main] org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/clientConfig.properties]
+2026-01-27 20:28:05.542 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@bb9e6dc: defining beans [codeVersion,bplinkCodeVersion,properties,propertyConfigurer,codeBase,serverSpec,generalSettings,schedulingMainPanel,serverURL,omsController,guiController,addressFormatter,noahJMSTemplate,genericFormFieldGenerator,clientSummaryFieldGenerator,lossAndDamageClaimFormFieldGenerator,newAidOrderFormFieldGenerator,returnAidOrderFormFieldGenerator,audiologicalFieldGenerator,lossandDamageContextValidator,newAidOrderContextValidator,invalidContextValidator,lossAndDamageClaimForm,newAidOrderForm,repairOrder,hearingLossAssessment,physicianReportHearingLossAssessment,hearingAssessment_PDF,physicianReportHearingAssessment_PDF,clientMiscCreditMemo,clientWriteOff,insurerWriteOff,recallDetails,monthlyInventoryReport,clientForms,hcfaFieldGenerator,hcfa0212FieldGenerator,hcfa0212PdfFieldGenerator,hcfaContextValidator,HCFA1500,HCFA1500_02_12,HCFA1500_02_12_PDF,HCFA1500_02_12_PDF_NO_BACKGROUND,purchaseAgreementFieldGenerator,purchaseAgreementContextValidator,superbill,superbill_PDF,sprintCapTel]; root of factory hierarchy
+[RelayAgent] Attempt 4 to resolve bean 'omsController'
+2026-01-27 20:28:05.943 INFO  [BlueprintRelay-ContextWatcher] com.blueprint.oms.controller.OMSControllerImpl - Initializing object to XML mapping
+2026-01-27 20:28:07.620 INFO  [BlueprintRelay-ContextWatcher] com.blueprint.oms.controller.OMSControllerImpl - Finished initialization
+[RelayAgent] Resolved bean 'omsController' on attempt 4 (com.blueprint.oms.controller.OMSControllerImpl)
+[RelayAgent] Creating proxy for omsController using interfaces: [interface com.blueprint.oms.controller.OMSControllerInterface]
+2026-01-27 20:28:09.255 INFO  [main] com.blueprint.oms.gui.OMSClient - Unable to locate bean: omsServiceDecorator
+2026-01-27 20:28:10.943 WARN  [main] com.blueprint.oms.gui.OMSClient - JVM architecture does not match version of Morena.
+[RelayAgent] Installed package logger on com.blueprint.oms.a.a.c
+[RelayAgent] Registered omsController proxy in bean factory
+2026-01-27 20:28:12.989 INFO  [BlueprintRelay-ContextWatcher] com.blueprint.scheduling.client.ui.main.SchedulingMainPanel - Initializing scheduler...
+2026-01-27 20:28:14.215 INFO  [BlueprintRelay-ContextWatcher] com.blueprint.oms.gui.OMSClient - Unable to locate bean: omsServiceDecorator
+2026-01-27 20:28:14.617 WARN  [BlueprintRelay-ContextWatcher] com.blueprint.oms.gui.OMSClient - JVM architecture does not match version of Morena.
+[RelayAgent] Injected proxy into bean 'guiController' (com.blueprint.oms.gui.us.GUIController_US)
+[RelayAgent] Skipping bean 'noahJMSTemplate': Error creating bean with name 'noahJMSTemplate' defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/noah.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'connectionFactory' is required (org.springframework.beans.factory.BeanCreationException)
+[RelayAgent] Creating proxy for OMSService using interfaces: [interface com.blueprint.oms.service.us.OMSService_US, interface org.springframework.aop.SpringProxy, interface org.springframework.aop.framework.Advised]
+[RelayAgent] Wrapped OMSService field 'aa' on com.blueprint.oms.gui.us.GUIController_US
+[RelayAgent] Creating proxy for OMSService using interfaces: [interface com.blueprint.oms.service.us.OMSService_US, interface org.springframework.aop.SpringProxy, interface org.springframework.aop.framework.Advised]
+[RelayAgent] Wrapped OMSService field 'ab' on com.blueprint.oms.gui.us.GUIController_US
+[RelayAgent] Creating proxy for OMSService using interfaces: [interface com.blueprint.oms.service.us.OMSService_US, interface org.springframework.aop.SpringProxy, interface org.springframework.aop.framework.Advised]
+[RelayAgent] Wrapped OMSService field 'x' on com.blueprint.oms.gui.us.GUIController_US
+[RelayAgent] Creating proxy for OMSService using interfaces: [interface com.blueprint.oms.service.us.OMSService_US, interface org.springframework.aop.SpringProxy, interface org.springframework.aop.framework.Advised]
+[RelayAgent] Wrapped OMSService field 'y' on com.blueprint.oms.gui.us.GUIController_US
+[RelayAgent] Creating proxy for OMSService using interfaces: [interface com.blueprint.oms.service.us.OMSService_US, interface org.springframework.aop.SpringProxy, interface org.springframework.aop.framework.Advised]
+[RelayAgent] Wrapped OMSService field 'z' on com.blueprint.oms.gui.us.GUIController_US
+2026-01-27 20:28:21.469 INFO  [BlueprintRelay-ContextWatcher] com.blueprint.scheduling.client.ui.main.SchedulingMainPanel - Initializing scheduler...
+[RelayAgent] Skipping bean 'noahJMSTemplate' during JMS install: Error creating bean with name 'noahJMSTemplate' defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/noah.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'connectionFactory' is required (org.springframework.beans.factory.BeanCreationException)
+2026-01-27 20:28:21.621 INFO  [BlueprintRelay-ContextWatcher] com.blueprint.scheduling.client.ui.main.SchedulingMainPanel - Initializing scheduler...
+[RelayAgent] Skipping bean 'noahJMSTemplate' during JMS field scan: Error creating bean with name 'noahJMSTemplate' defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/noah.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'connectionFactory' is required (org.springframework.beans.factory.BeanCreationException)
+2026-01-27 20:28:23.952 INFO  [main] com.blueprint.oms.gui.OMSClient - Unable to locate bean: counselEarUserMap
+2026-01-27 20:28:23.986 INFO  [Thread-5] org.apache.commons.a.A - I/O exception (java.net.ConnectException) caught when processing request: Connection refused (Connection refused)
+2026-01-27 20:28:23.986 INFO  [Thread-5] org.apache.commons.a.A - Retrying request
+2026-01-27 20:28:23.987 INFO  [Thread-5] org.apache.commons.a.A - I/O exception (java.net.ConnectException) caught when processing request: Connection refused (Connection refused)
+2026-01-27 20:28:23.987 INFO  [Thread-5] org.apache.commons.a.A - Retrying request
+2026-01-27 20:28:23.988 INFO  [Thread-5] org.apache.commons.a.A - I/O exception (java.net.ConnectException) caught when processing request: Connection refused (Connection refused)
+2026-01-27 20:28:23.988 INFO  [Thread-5] org.apache.commons.a.A - Retrying request
+2026-01-27 20:28:23.989 INFO  [Thread-5] com.blueprint.oms.gui.common.GUIUtil - Noah REST service not found on local computer
+2026-01-27 20:28:33.232 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.logging.UserMetadataLogging - Logging user metadata
+2026-01-27 20:28:33.236 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Sending login request for cpape to https://us-cdn1.aws.bp-solutions.net/us_est6/FL/acc
+2026-01-27 20:28:33.278 INFO  [Thread-6] com.blueprint.oms.controller.OMSControllerImpl - sending login request to server
+[RelayAgent] Installed AWS provider logger on software.amazon.awssdk.auth.credentials.AwsCredentials
+[RelayAgent] Installed AWS provider logger on software.amazon.awssdk.auth.credentials.AwsCredentialsProvider
+2026-01-27 20:28:40.511 INFO  [Thread-6] com.blueprint.oms.gui.OMSClient - Clinic timezone: Eastern Daylight Time (US/Eastern)
+2026-01-27 20:28:40.512 INFO  [Thread-6] com.blueprint.oms.gui.OMSClient - No Crystal Reports, removing menu item: Reports (old)
+2026-01-27 20:28:40.523 INFO  [Thread-6] com.blueprint.oms.gui.OMSClient - Unable to locate bean: healthCardFormatMapping
+2026-01-27 20:28:40.530 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Login successful
+2026-01-27 20:28:41.129 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Retrieving sms toolbar notifications
+2026-01-27 20:28:41.131 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Requesting client list
+[RelayAgent] Installed AWS provider logger on software.amazon.awssdk.auth.credentials.AwsBasicCredentials
+[RelayAgent] Installed AWS provider logger on software.amazon.awssdk.auth.credentials.StaticCredentialsProvider
+Exception in thread "AWT-EventQueue-0" java.lang.IllegalAccessError: tried to access method com.blueprint.relay.AwsProviderAdvice.readString(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String; from class software.amazon.awssdk.auth.credentials.StaticCredentialsProvider
+	at software.amazon.awssdk.auth.credentials.StaticCredentialsProvider.resolveCredentials(StaticCredentialsProvider.java:42)
+	at software.amazon.awssdk.awscore.internal.AwsExecutionContextBuilder.resolveCredentials(AwsExecutionContextBuilder.java:171)
+	at software.amazon.awssdk.awscore.internal.AwsExecutionContextBuilder.invokeInterceptorsAndCreateExecutionContext(AwsExecutionContextBuilder.java:108)
+	at software.amazon.awssdk.awscore.client.handler.AwsSyncClientHandler.invokeInterceptorsAndCreateExecutionContext(AwsSyncClientHandler.java:69)
+	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.lambda$execute$1(BaseSyncClientHandler.java:78)
+	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.measureApiCallSuccess(BaseSyncClientHandler.java:175)
+	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.execute(BaseSyncClientHandler.java:76)
+	at software.amazon.awssdk.core.client.handler.SdkSyncClientHandler.execute(SdkSyncClientHandler.java:45)
+	at software.amazon.awssdk.awscore.client.handler.AwsSyncClientHandler.execute(AwsSyncClientHandler.java:56)
+	at software.amazon.awssdk.services.sqs.DefaultSqsClient.getQueueUrl(DefaultSqsClient.java:853)
+	at com.blueprint.common.aws.AWSService.doesAWSQueueExist(AWSService.java:458)
+	at com.blueprint.oms.gui.GUIController.e(Unknown Source)
+	at com.blueprint.oms.gui.GUIController.a(Unknown Source)
+	at com.blueprint.oms.gui.a.b(Unknown Source)
+	at com.blueprint.oms.gui.common.du.run(Unknown Source)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:109)
+	at java.awt.WaitDispatchSupport$2.run(WaitDispatchSupport.java:190)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)

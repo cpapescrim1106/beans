@@ -1,0 +1,94 @@
+Launching OMS client with relay agent...
+  JAVA_HOME: /Users/chris/Documents/BlueprintProject/jdk8u462-b08/Contents/Home
+  Agent:     /Users/chris/Documents/BlueprintProject/relay-agent/build/blueprint-relay-agent.jar
+  Log file:  /Users/chris/BlueprintRelay.log
+  Classpath: /Users/chris/Documents/BlueprintProject/client_classpath_jws.txt
+  Service URL: https://us-cdn1.aws.bp-solutions.net/us_est6/FL/acc
+
+[RELAY] Agent loaded
+[RELAY] Context watcher thread started
+[RELAY] SafeContextWatcher started
+2026-01-27 18:29:55.124 INFO  [main] com.blueprint.oms.gui.OMSClient - loading spring configuration...
+[RELAY] Found context in OMSClient.az
+[RELAY] Spring context found!
+2026-01-27 18:29:55.363 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/springClientContext.xml]
+2026-01-27 18:29:56.011 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]
+2026-01-27 18:29:56.208 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/noah.xml]
+2026-01-27 18:29:56.247 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]
+2026-01-27 18:29:56.321 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]
+2026-01-27 18:29:56.425 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US_hcfa.xml]
+2026-01-27 18:29:56.579 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'clientForms': replacing [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US_hcfa.xml]]
+2026-01-27 18:29:56.585 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'clientWriteOff': replacing [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 18:29:56.586 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'insurerWriteOff': replacing [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 18:29:56.587 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'repairOrder': replacing [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 18:29:56.588 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'clientForms': replacing [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US_hcfa.xml]] with [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 18:29:56.588 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'codeVersion': replacing [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]] with [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/springClientContext.xml]]
+2026-01-27 18:29:56.589 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'bplinkCodeVersion': replacing [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]] with [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/springClientContext.xml]]
+2026-01-27 18:29:56.592 INFO  [main] org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@29f69090: startup date [Tue Jan 27 18:29:56 EST 2026]; root of context hierarchy
+2026-01-27 18:29:56.813 INFO  [main] org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/clientConfig_generic.properties]
+2026-01-27 18:29:56.817 INFO  [main] org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/clientConfig_base.properties]
+2026-01-27 18:29:56.818 INFO  [main] org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/clientConfig.properties]
+2026-01-27 18:29:56.876 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@69997e9d: defining beans [codeVersion,bplinkCodeVersion,properties,propertyConfigurer,codeBase,serverSpec,generalSettings,schedulingMainPanel,serverURL,omsController,guiController,addressFormatter,noahJMSTemplate,genericFormFieldGenerator,clientSummaryFieldGenerator,lossAndDamageClaimFormFieldGenerator,newAidOrderFormFieldGenerator,returnAidOrderFormFieldGenerator,audiologicalFieldGenerator,lossandDamageContextValidator,newAidOrderContextValidator,invalidContextValidator,lossAndDamageClaimForm,newAidOrderForm,repairOrder,hearingLossAssessment,physicianReportHearingLossAssessment,hearingAssessment_PDF,physicianReportHearingAssessment_PDF,clientMiscCreditMemo,clientWriteOff,insurerWriteOff,recallDetails,monthlyInventoryReport,clientForms,hcfaFieldGenerator,hcfa0212FieldGenerator,hcfa0212PdfFieldGenerator,hcfaContextValidator,HCFA1500,HCFA1500_02_12,HCFA1500_02_12_PDF,HCFA1500_02_12_PDF_NO_BACKGROUND,purchaseAgreementFieldGenerator,purchaseAgreementContextValidator,superbill,superbill_PDF,sprintCapTel]; root of factory hierarchy
+2026-01-27 18:29:57.183 INFO  [main] com.blueprint.oms.controller.OMSControllerImpl - Initializing object to XML mapping
+[RELAY] Context type: org.springframework.context.support.GenericApplicationContext
+[RELAY] Getting omsController bean (attempt 1)...
+2026-01-27 18:29:58.925 INFO  [main] com.blueprint.oms.controller.OMSControllerImpl - Finished initialization
+[RELAY] omsController found: OMSControllerImpl
+[RELAY] === Discovering methods on com.blueprint.oms.controller.OMSControllerImpl ===
+[RELAY]   (no report-related methods found)
+[RELAY] LocalReportServer started on http://127.0.0.1:7777
+[RELAY] Success! Report server running on 127.0.0.1:7777
+2026-01-27 18:30:00.778 INFO  [main] com.blueprint.oms.gui.OMSClient - Unable to locate bean: omsServiceDecorator
+2026-01-27 18:30:02.016 WARN  [main] com.blueprint.oms.gui.OMSClient - JVM architecture does not match version of Morena.
+Warning: the fonts "Times" and "Lucida Bright" are not available for the Java logical font "Serif", which may have unexpected appearance or behavior. Re-enable the "Times" font to remove this warning.
+2026-01-27 18:30:08.044 INFO  [main] com.blueprint.oms.gui.OMSClient - Unable to locate bean: counselEarUserMap
+2026-01-27 18:30:08.091 INFO  [Thread-7] org.apache.commons.a.A - I/O exception (java.net.ConnectException) caught when processing request: Connection refused (Connection refused)
+2026-01-27 18:30:08.092 INFO  [Thread-7] org.apache.commons.a.A - Retrying request
+2026-01-27 18:30:08.093 INFO  [Thread-7] org.apache.commons.a.A - I/O exception (java.net.ConnectException) caught when processing request: Connection refused (Connection refused)
+2026-01-27 18:30:08.093 INFO  [Thread-7] org.apache.commons.a.A - Retrying request
+2026-01-27 18:30:08.095 INFO  [Thread-7] org.apache.commons.a.A - I/O exception (java.net.ConnectException) caught when processing request: Connection refused (Connection refused)
+2026-01-27 18:30:08.095 INFO  [Thread-7] org.apache.commons.a.A - Retrying request
+2026-01-27 18:30:08.096 INFO  [Thread-7] com.blueprint.oms.gui.common.GUIUtil - Noah REST service not found on local computer
+2026-01-27 18:30:13.860 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.logging.UserMetadataLogging - Logging user metadata
+2026-01-27 18:30:13.863 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Sending login request for cpape to https://us-cdn1.aws.bp-solutions.net/us_est6/FL/acc
+2026-01-27 18:30:13.872 INFO  [Thread-8] com.blueprint.oms.controller.OMSControllerImpl - sending login request to server
+2026-01-27 18:30:20.707 INFO  [Thread-8] com.blueprint.oms.gui.OMSClient - Clinic timezone: Eastern Daylight Time (US/Eastern)
+2026-01-27 18:30:20.709 INFO  [Thread-8] com.blueprint.oms.gui.OMSClient - No Crystal Reports, removing menu item: Reports (old)
+2026-01-27 18:30:20.722 INFO  [Thread-8] com.blueprint.oms.gui.OMSClient - Unable to locate bean: healthCardFormatMapping
+2026-01-27 18:30:20.725 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Login successful
+2026-01-27 18:30:21.044 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Retrieving sms toolbar notifications
+2026-01-27 18:30:21.049 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Requesting client list
+2026-01-27 18:30:23.869 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Subscribing user queue FL_accQueue_UserNotification_50_maclan to topic FL_accTopic_UserNotification_50
+2026-01-27 18:30:24.525 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Subscribing user queue FL_accQueue_UserNotification_50_maclan to clinic topic FL_accTopic
+2026-01-27 18:30:24.787 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Starting notification message listener...
+2026-01-27 18:30:24.807 INFO  [AWT-EventQueue-0] com.blueprint.oms.a.a.a - Notification system listening for messages...
+2026-01-27 18:30:24.808 INFO  [AWT-EventQueue-0] com.blueprint.oms.a.a.c - Starting listener on queue: FL_accQueue_UserNotification_50_maclan
+2026-01-27 18:30:25.539 INFO  [AWT-EventQueue-0] com.blueprint.scheduling.client.ui.main.SchedulingMainPanel - Initializing scheduler...
+Exception in thread "Thread-11" java.lang.NoSuchMethodError: com.fasterxml.jackson.core.JsonParser.getReadCapabilities()Lcom/fasterxml/jackson/core/util/JacksonFeatureSet;
+	at com.fasterxml.jackson.databind.DeserializationContext.<init>(DeserializationContext.java:212)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.<init>(DefaultDeserializationContext.java:50)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext$Impl.<init>(DefaultDeserializationContext.java:391)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext$Impl.createInstance(DefaultDeserializationContext.java:413)
+	at com.fasterxml.jackson.databind.ObjectMapper.createDeserializationContext(ObjectMapper.java:4738)
+	at com.fasterxml.jackson.databind.ObjectMapper._readTreeAndClose(ObjectMapper.java:4713)
+	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:3076)
+	at com.blueprint.oms.a.a.a.a(Unknown Source)
+	at com.blueprint.oms.a.a.a.onMessage(Unknown Source)
+	at com.blueprint.oms.a.a.d.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:750)
+2026-01-27 18:30:26.435 INFO  [AWT-EventQueue-0] com.blueprint.scheduling.client.ui.main.SchedulingMainPanel - Timezone is Eastern Daylight Time
+2026-01-27 18:30:26.439 INFO  [AWT-EventQueue-0] com.blueprint.scheduling.client.ui.main.SchedulingMainPanel - Scheduling for 1 locations, 53 event types
+2026-01-27 18:30:27.598 INFO  [AWT-EventQueue-0] com.blueprint.scheduling.client.controller.BlueprintSchedulingController - Retrieving events for period Jan 27, 2026 12:00:00 AM to Jan 27, 2026 11:59:59 PM
+2026-01-27 18:30:27.642 INFO  [AWT-EventQueue-0] com.blueprint.scheduling.client.controller.BlueprintSchedulingController - Retrieving waiting room events on Jan 27, 2026 6:30:27 PM for location 1
+2026-01-27 18:30:27.752 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.OMSClient - Unable to locate bean: counselEarUserMap
+2026-01-27 18:30:27.869 WARN  [AWT-EventQueue-0] com.blueprint.oms.gui.OMSClient - Unable to locate bean: customForms
+2026-01-27 18:30:27.913 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Sending request for user report access, client form reports only.
+2026-01-27 18:30:28.042 INFO  [AWT-EventQueue-0] com.blueprint.oms.chatcontroller.BlueprintChatController - Retrieving conversations for user 50
+2026-01-27 18:30:28.212 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Retrieving clinic-specific dictionary...
+2026-01-27 18:30:28.362 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Retrieving sms toolbar notifications
+2026-01-27 18:30:28.848 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Starting chat message listener...
+2026-01-27 18:30:28.928 INFO  [AWT-EventQueue-0] com.blueprint.oms.a.a.a - Notification system listening for messages...
+2026-01-27 18:30:28.932 INFO  [AWT-EventQueue-0] com.blueprint.oms.a.a.c - Starting listener on queue: FL_accQueue_UserChat_50.fifo
+2026-01-27 18:30:28.944 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.logging.BplinkDetectionLogging - Logging BPLink data
+2026-01-27 18:30:51.935 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Sending request for user report access, all reports.
+2026-01-27 18:31:37.599 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Sending request for user report access, all reports.

@@ -11,6 +11,10 @@ export const GET = async (request: Request) => {
   const state = searchParams.get("state");
   const realmId = searchParams.get("realmId");
 
+  console.log("[QBO Callback] code:", code ? "present" : "missing");
+  console.log("[QBO Callback] state:", state);
+  console.log("[QBO Callback] realmId:", realmId);
+
   if (!code || !realmId) {
     return NextResponse.json(
       { error: "Missing code or realmId" },
@@ -20,8 +24,11 @@ export const GET = async (request: Request) => {
 
   const cookieStore = await cookies();
   const storedState = cookieStore.get(STATE_COOKIE)?.value;
+  console.log("[QBO Callback] storedState from cookie:", storedState);
+
   if (!state || !storedState || state !== storedState) {
-    return NextResponse.json({ error: "Invalid state" }, { status: 400 });
+    console.log("[QBO Callback] State mismatch - state:", state, "storedState:", storedState);
+    return NextResponse.json({ error: "Invalid state", state, storedState }, { status: 400 });
   }
 
   const clientId = process.env.QBO_CLIENT_ID;

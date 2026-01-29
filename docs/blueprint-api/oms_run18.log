@@ -1,0 +1,608 @@
+Launching OMS client with relay agent...
+  JAVA_HOME: /Users/chris/Documents/BlueprintProject/jdk8u462-b08/Contents/Home
+  Agent:     /Users/chris/Documents/BlueprintProject/relay-agent/build/blueprint-relay-agent.jar
+  Log file:  /Users/chris/BlueprintRelay.log
+  Service URL: https://us-cdn1.aws.bp-solutions.net/us_est6/FL/acc
+
+[RelayAgent] Blueprint relay agent starting (args: )
+[RelayAgent] Installed ByteBuddy AWS hooks.
+[RelayAgent] Installed ByteBuddy HTTP hooks.
+[RelayAgent] Detected OMSClient class load, kicking off context watcher
+2026-01-27 15:21:23.248 INFO  [main] com.blueprint.oms.gui.OMSClient - loading spring configuration...
+2026-01-27 15:21:23.722 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/springClientContext.xml]
+[RelayAgent] Spring context detected: org.springframework.context.support.GenericApplicationContext
+[RelayAgent] Context listener registration threw: java.lang.NullPointerException
+[RelayAgent] Waiting for Spring context refresh to complete
+[RelayAgent] getBeanFactory succeeded but context is not active yet (attempt 1)
+2026-01-27 15:21:24.847 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]
+2026-01-27 15:21:25.150 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/noah.xml]
+2026-01-27 15:21:25.269 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]
+2026-01-27 15:21:25.401 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]
+2026-01-27 15:21:25.558 INFO  [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US_hcfa.xml]
+2026-01-27 15:21:25.848 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'clientForms': replacing [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US_hcfa.xml]]
+2026-01-27 15:21:25.861 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'clientWriteOff': replacing [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 15:21:25.861 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'insurerWriteOff': replacing [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 15:21:25.863 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'repairOrder': replacing [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_generic.xml]] with [Generic bean: class [com.blueprint.oms.common.clientreporting.ReportTemplate]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 15:21:25.865 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'clientForms': replacing [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US_hcfa.xml]] with [Generic bean: class [java.util.LinkedList]; scope=prototype; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/forms_US.xml]]
+2026-01-27 15:21:25.865 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'codeVersion': replacing [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]] with [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/springClientContext.xml]]
+2026-01-27 15:21:25.865 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Overriding bean definition for bean 'bplinkCodeVersion': replacing [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]] with [Generic bean: class [java.lang.String]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/springClientContext.xml]]
+2026-01-27 15:21:25.907 INFO  [main] org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@763cf5b9: startup date [Tue Jan 27 15:21:25 EST 2026]; root of context hierarchy
+[RelayAgent] Context reports active after 5 checks
+[RelayAgent] Context exposes 48 beans, first 10: [codeVersion, bplinkCodeVersion, properties, propertyConfigurer, codeBase, serverSpec, generalSettings, schedulingMainPanel, serverURL, omsController]
+[RelayAgent] Filtered bean names (4): noahJMSTemplate, physicianReportHearingLossAssessment, physicianReportHearingAssessment_PDF, monthlyInventoryReport
+[RelayAgent] omsController bean definition present: true
+[RelayAgent] Attempt 1 to resolve bean 'omsController'
+[RelayAgent] Bean resolution attempt 1 failed: Error creating bean with name 'omsController' defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]: Cannot resolve reference to bean 'serverURL' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'serverURL' defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/springClientContext_base.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [java.net.URL]: Constructor threw exception; nested exception is java.net.MalformedURLException: no protocol: ${SERVICE_URL:https://us-cdn1.aws.bp-solutions.net/us_est6/FL/acc} (org.springframework.beans.factory.BeanCreationException)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.AwsCredentialsProvider (loaded=false)
+2026-01-27 15:21:27.627 INFO  [main] org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/clientConfig_generic.properties]
+2026-01-27 15:21:27.641 INFO  [main] org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/clientConfig_base.properties]
+2026-01-27 15:21:27.645 INFO  [main] org.springframework.beans.factory.config.PropertiesFactoryBean - Loading properties file from URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/clientConfig.properties]
+[RelayAgent] Bean lookup failed for software.amazon.awssdk.services.sqs.SqsClient: null
+2026-01-27 15:21:28.199 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6d6ac396: defining beans [codeVersion,bplinkCodeVersion,properties,propertyConfigurer,codeBase,serverSpec,generalSettings,schedulingMainPanel,serverURL,omsController,guiController,addressFormatter,noahJMSTemplate,genericFormFieldGenerator,clientSummaryFieldGenerator,lossAndDamageClaimFormFieldGenerator,newAidOrderFormFieldGenerator,returnAidOrderFormFieldGenerator,audiologicalFieldGenerator,lossandDamageContextValidator,newAidOrderContextValidator,invalidContextValidator,lossAndDamageClaimForm,newAidOrderForm,repairOrder,hearingLossAssessment,physicianReportHearingLossAssessment,hearingAssessment_PDF,physicianReportHearingAssessment_PDF,clientMiscCreditMemo,clientWriteOff,insurerWriteOff,recallDetails,monthlyInventoryReport,clientForms,hcfaFieldGenerator,hcfa0212FieldGenerator,hcfa0212PdfFieldGenerator,hcfaContextValidator,HCFA1500,HCFA1500_02_12,HCFA1500_02_12_PDF,HCFA1500_02_12_PDF_NO_BACKGROUND,purchaseAgreementFieldGenerator,purchaseAgreementContextValidator,superbill,superbill_PDF,sprintCapTel]; root of factory hierarchy
+[RelayAgent] Attempt 2 to resolve bean 'omsController'
+[RelayAgent] ByteBuddy transformed: com.amazonaws.auth.AWSCredentialsProvider (loaded=false)
+2026-01-27 15:21:28.514 INFO  [BlueprintRelay-ContextWatcher] com.blueprint.oms.controller.OMSControllerImpl - Initializing object to XML mapping
+2026-01-27 15:21:30.709 INFO  [BlueprintRelay-ContextWatcher] com.blueprint.oms.controller.OMSControllerImpl - Finished initialization
+[RelayAgent] Resolved bean 'omsController' on attempt 2 (com.blueprint.oms.controller.OMSControllerImpl)
+[RelayAgent] Creating proxy for omsController using interfaces: [interface com.blueprint.oms.controller.OMSControllerInterface]
+2026-01-27 15:21:30.826 INFO  [main] com.blueprint.oms.controller.OMSControllerImpl - Initializing object to XML mapping
+2026-01-27 15:21:31.355 INFO  [main] com.blueprint.oms.controller.OMSControllerImpl - Finished initialization
+[RelayAgent] Bean factory replace failed: null
+[RelayAgent] Unable to replace omsController singleton cleanly
+2026-01-27 15:21:34.138 INFO  [main] com.blueprint.oms.gui.OMSClient - Unable to locate bean: omsServiceDecorator
+2026-01-27 15:21:35.991 WARN  [main] com.blueprint.oms.gui.OMSClient - JVM architecture does not match version of Morena.
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.internal.LazyAwsCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.SystemPropertyCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.internal.SystemSettingsCredentialsProvider (loaded=false)
+[RelayAgent] HTTP hook transformed: java.net.HttpURLConnection (loaded=false)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.EnvironmentVariableCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.WebIdentityTokenFileCredentialsProvider (loaded=false)
+2026-01-27 15:21:38.311 INFO  [BlueprintRelay-ContextWatcher] com.blueprint.scheduling.client.ui.main.SchedulingMainPanel - Initializing scheduler...
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.ProfileCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.ContainerCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.HttpCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.InstanceProfileCredentialsProvider (loaded=false)
+[RelayAgent] Injected proxy into bean 'guiController' (com.blueprint.oms.gui.us.GUIController_US)
+[RelayAgent] Skipping bean 'noahJMSTemplate': Error creating bean with name 'noahJMSTemplate' defined in URL [file:/Users/chris/Documents/BlueprintProject/client_runtime/shared/noah.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Property 'connectionFactory' is required (org.springframework.beans.factory.BeanCreationException)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.AwsCredentialsProviderChain (loaded=false)
+[RelayAgent] Creating proxy for OMSService using interfaces: [interface com.blueprint.oms.service.us.OMSService_US, interface org.springframework.aop.SpringProxy, interface org.springframework.aop.framework.Advised]
+[RelayAgent] Wrapped OMSService field 'aa' on com.blueprint.oms.gui.us.GUIController_US
+[RelayAgent] Creating proxy for OMSService using interfaces: [interface com.blueprint.oms.service.us.OMSService_US, interface org.springframework.aop.SpringProxy, interface org.springframework.aop.framework.Advised]
+[RelayAgent] Wrapped OMSService field 'ab' on com.blueprint.oms.gui.us.GUIController_US
+[RelayAgent] Creating proxy for OMSService using interfaces: [interface com.blueprint.oms.service.us.OMSService_US, interface org.springframework.aop.SpringProxy, interface org.springframework.aop.framework.Advised]
+[RelayAgent] Wrapped OMSService field 'x' on com.blueprint.oms.gui.us.GUIController_US
+[RelayAgent] Creating proxy for OMSService using interfaces: [interface com.blueprint.oms.service.us.OMSService_US, interface org.springframework.aop.SpringProxy, interface org.springframework.aop.framework.Advised]
+[RelayAgent] Wrapped OMSService field 'y' on com.blueprint.oms.gui.us.GUIController_US
+[RelayAgent] Creating proxy for OMSService using interfaces: [interface com.blueprint.oms.service.us.OMSService_US, interface org.springframework.aop.SpringProxy, interface org.springframework.aop.framework.Advised]
+[RelayAgent] Wrapped OMSService field 'z' on com.blueprint.oms.gui.us.GUIController_US
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+[RelayAgent] ByteBuddy transformed: com.amazonaws.auth.DefaultAWSCredentialsProviderChain (loaded=false)
+[RelayAgent] ByteBuddy transformed: com.amazonaws.auth.AWSCredentialsProviderChain (loaded=false)
+[RelayAgent] ByteBuddy transformed: com.amazonaws.auth.EnvironmentVariableCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: com.amazonaws.auth.SystemPropertiesCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: com.amazonaws.auth.WebIdentityTokenCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: com.amazonaws.auth.profile.internal.securitytoken.STSProfileCredentialsServiceProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: com.amazonaws.auth.profile.ProfileCredentialsProvider (loaded=false)
+[RelayAgent] ByteBuddy transformed: com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper (loaded=false)
+[RelayAgent] ByteBuddy transformed: com.amazonaws.auth.InstanceProfileCredentialsProvider (loaded=false)
+Warning: the fonts "Times" and "Lucida Bright" are not available for the Java logical font "Serif", which may have unexpected appearance or behavior. Re-enable the "Times" font to remove this warning.
+2026-01-27 15:21:42.289 WARN  [BlueprintRelay-AwsCredSniffer] com.amazonaws.internal.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:117) [aws-java-sdk-core-1.12.48.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_462]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_462]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_462]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_462]
+	at com.blueprint.relay.AwsCredentialSniffer.resolveAndLogV1(AwsCredentialSniffer.java:324) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.sniffDefaultProviderV1(AwsCredentialSniffer.java:207) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.runScanLoop(AwsCredentialSniffer.java:125) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.lambda$sniff$0(AwsCredentialSniffer.java:26) [blueprint-relay-agent.jar:na]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_462]
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_462]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_462]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_462]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:465) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:560) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:359) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1245) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1224) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1073) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1007) ~[na:1.8.0_462]
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95) ~[aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80) [aws-java-sdk-core-1.12.48.jar:na]
+	... 19 common frames omitted
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+[RelayAgent] No AWS credential providers found via Spring context; scanning static fields...
+2026-01-27 15:21:42.327 WARN  [BlueprintRelay-AwsCredSniffer] com.amazonaws.internal.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165) [aws-java-sdk-core-1.12.48.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_462]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_462]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_462]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_462]
+	at com.blueprint.relay.AwsCredentialSniffer.resolveAndLogV1(AwsCredentialSniffer.java:324) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.scanStaticFields(AwsCredentialSniffer.java:417) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.runScanLoop(AwsCredentialSniffer.java:128) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.lambda$sniff$0(AwsCredentialSniffer.java:26) [blueprint-relay-agent.jar:na]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_462]
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_462]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_462]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_462]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:465) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:560) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:359) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1245) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1224) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1073) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1007) ~[na:1.8.0_462]
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95) ~[aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80) [aws-java-sdk-core-1.12.48.jar:na]
+	... 17 common frames omitted
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException
+	at com.jidesoft.plaf.basic.BasicJideTabbedPaneUI$ScrollableTabSupport.stateChanged(BasicJideTabbedPaneUI.java:7924)
+	at javax.swing.JViewport.fireStateChanged(JViewport.java:1369)
+	at javax.swing.JViewport.setViewSize(JViewport.java:1021)
+	at com.jidesoft.plaf.basic.BasicJideTabbedPaneUI$ComponentHandler.componentResized(BasicJideTabbedPaneUI.java:8725)
+	at java.awt.Component.processComponentEvent(Component.java:6365)
+	at java.awt.Component.processEvent(Component.java:6319)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2026-01-27 15:21:45.224 INFO  [main] com.blueprint.oms.gui.OMSClient - Unable to locate bean: counselEarUserMap
+2026-01-27 15:21:45.279 INFO  [Thread-5] org.apache.commons.a.A - I/O exception (java.net.ConnectException) caught when processing request: Connection refused (Connection refused)
+2026-01-27 15:21:45.279 INFO  [Thread-5] org.apache.commons.a.A - Retrying request
+2026-01-27 15:21:45.280 INFO  [Thread-5] org.apache.commons.a.A - I/O exception (java.net.ConnectException) caught when processing request: Connection refused (Connection refused)
+2026-01-27 15:21:45.280 INFO  [Thread-5] org.apache.commons.a.A - Retrying request
+2026-01-27 15:21:45.281 INFO  [Thread-5] org.apache.commons.a.A - I/O exception (java.net.ConnectException) caught when processing request: Connection refused (Connection refused)
+2026-01-27 15:21:45.281 INFO  [Thread-5] org.apache.commons.a.A - Retrying request
+2026-01-27 15:21:45.281 INFO  [Thread-5] com.blueprint.oms.gui.common.GUIUtil - Noah REST service not found on local computer
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+2026-01-27 15:21:52.372 WARN  [BlueprintRelay-AwsCredSniffer] com.amazonaws.internal.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:117) [aws-java-sdk-core-1.12.48.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_462]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_462]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_462]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_462]
+	at com.blueprint.relay.AwsCredentialSniffer.resolveAndLogV1(AwsCredentialSniffer.java:324) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.sniffDefaultProviderV1(AwsCredentialSniffer.java:207) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.runScanLoop(AwsCredentialSniffer.java:125) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.lambda$sniff$0(AwsCredentialSniffer.java:26) [blueprint-relay-agent.jar:na]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_462]
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_462]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_462]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_462]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:465) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:560) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:359) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1245) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1224) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1073) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1007) ~[na:1.8.0_462]
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95) ~[aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80) [aws-java-sdk-core-1.12.48.jar:na]
+	... 19 common frames omitted
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+2026-01-27 15:21:53.911 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.logging.UserMetadataLogging - Logging user metadata
+2026-01-27 15:21:53.916 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Sending login request for cpape to https://us-cdn1.aws.bp-solutions.net/us_est6/FL/acc
+2026-01-27 15:21:53.949 INFO  [Thread-6] com.blueprint.oms.controller.OMSControllerImpl - sending login request to server
+2026-01-27 15:22:02.610 INFO  [Thread-6] com.blueprint.oms.gui.OMSClient - Clinic timezone: Eastern Daylight Time (US/Eastern)
+2026-01-27 15:22:02.612 INFO  [Thread-6] com.blueprint.oms.gui.OMSClient - No Crystal Reports, removing menu item: Reports (old)
+2026-01-27 15:22:02.627 INFO  [Thread-6] com.blueprint.oms.gui.OMSClient - Unable to locate bean: healthCardFormatMapping
+2026-01-27 15:22:02.632 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Login successful
+2026-01-27 15:22:03.283 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Retrieving sms toolbar notifications
+2026-01-27 15:22:03.290 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Requesting client list
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.AwsBasicCredentials (loaded=false)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.StaticCredentialsProvider (loaded=false)
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.signer.internal.AbstractAws4Signer (loaded=false)
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.core.interceptor.ExecutionAttributes (loaded=false)
+[RelayAgent] HTTP hook transformed: org.apache.http.client.HttpClient (loaded=false)
+[RelayAgent] HTTP hook transformed: software.amazon.awssdk.http.apache.internal.impl.ConnectionManagerAwareHttpClient (loaded=false)
+[RelayAgent] HTTP hook transformed: org.apache.http.impl.client.CloseableHttpClient (loaded=false)
+[RelayAgent] HTTP hook transformed: org.apache.http.impl.client.MinimalHttpClient (loaded=false)
+[RelayAgent] HTTP hook transformed: org.apache.http.impl.client.InternalHttpClient (loaded=false)
+[RelayAgent] HTTP hook transformed: software.amazon.awssdk.http.apache.internal.impl.ApacheSdkHttpClient (loaded=false)
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+[RelayAgent] ByteBuddy transformed: software.amazon.awssdk.auth.credentials.AwsSessionCredentials (loaded=false)
+2026-01-27 15:22:07.994 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Subscribing user queue FL_accQueue_UserNotification_50_maclan to topic FL_accTopic_UserNotification_50
+2026-01-27 15:22:08.965 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Subscribing user queue FL_accQueue_UserNotification_50_maclan to clinic topic FL_accTopic
+2026-01-27 15:22:09.400 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Starting notification message listener...
+2026-01-27 15:22:09.469 INFO  [AWT-EventQueue-0] com.blueprint.oms.a.a.a - Notification system listening for messages...
+2026-01-27 15:22:09.469 INFO  [AWT-EventQueue-0] com.blueprint.oms.a.a.c - Starting listener on queue: FL_accQueue_UserNotification_50_maclan
+2026-01-27 15:22:09.514 INFO  [AWT-EventQueue-0] com.blueprint.scheduling.client.ui.main.SchedulingMainPanel - Initializing scheduler...
+2026-01-27 15:22:09.682 INFO  [AWT-EventQueue-0] com.blueprint.scheduling.client.ui.main.SchedulingMainPanel - Timezone is Eastern Daylight Time
+2026-01-27 15:22:09.683 INFO  [AWT-EventQueue-0] com.blueprint.scheduling.client.ui.main.SchedulingMainPanel - Scheduling for 1 locations, 53 event types
+2026-01-27 15:22:10.187 INFO  [Thread-9] com.blueprint.oms.a.a.a - Received message with payload type: loggedOnElsewhere
+2026-01-27 15:22:11.407 INFO  [AWT-EventQueue-0] com.blueprint.scheduling.client.controller.BlueprintSchedulingController - Retrieving events for period Jan 27, 2026 12:00:00 AM to Jan 27, 2026 11:59:59 PM
+2026-01-27 15:22:11.444 INFO  [AWT-EventQueue-0] com.blueprint.scheduling.client.controller.BlueprintSchedulingController - Retrieving waiting room events on Jan 27, 2026 3:22:11 PM for location 1
+2026-01-27 15:22:11.668 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.OMSClient - Unable to locate bean: counselEarUserMap
+2026-01-27 15:22:11.746 WARN  [AWT-EventQueue-0] com.blueprint.oms.gui.OMSClient - Unable to locate bean: customForms
+2026-01-27 15:22:11.783 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Sending request for user report access, client form reports only.
+2026-01-27 15:22:11.874 INFO  [AWT-EventQueue-0] com.blueprint.oms.chatcontroller.BlueprintChatController - Retrieving conversations for user 50
+2026-01-27 15:22:12.002 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Retrieving clinic-specific dictionary...
+2026-01-27 15:22:12.211 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Retrieving sms toolbar notifications
+2026-01-27 15:22:12.999 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Starting chat message listener...
+2026-01-27 15:22:13.095 INFO  [AWT-EventQueue-0] com.blueprint.oms.a.a.a - Notification system listening for messages...
+2026-01-27 15:22:13.097 INFO  [AWT-EventQueue-0] com.blueprint.oms.a.a.c - Starting listener on queue: FL_accQueue_UserChat_50.fifo
+2026-01-27 15:22:13.099 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.logging.BplinkDetectionLogging - Logging BPLink data
+2026-01-27 15:22:15.826 INFO  [Thread-9] com.blueprint.oms.a.a.a - Received message with payload type: reportUserClientForm
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+2026-01-27 15:22:16.447 WARN  [BlueprintRelay-AwsCredSniffer] com.amazonaws.internal.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:117) [aws-java-sdk-core-1.12.48.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_462]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_462]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_462]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_462]
+	at com.blueprint.relay.AwsCredentialSniffer.resolveAndLogV1(AwsCredentialSniffer.java:324) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.sniffDefaultProviderV1(AwsCredentialSniffer.java:207) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.runScanLoop(AwsCredentialSniffer.java:125) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.lambda$sniff$0(AwsCredentialSniffer.java:26) [blueprint-relay-agent.jar:na]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_462]
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_462]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_462]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_462]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:465) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:560) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:359) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1245) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1224) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1073) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1007) ~[na:1.8.0_462]
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95) ~[aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80) [aws-java-sdk-core-1.12.48.jar:na]
+	... 19 common frames omitted
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+2026-01-27 15:22:26.491 WARN  [BlueprintRelay-AwsCredSniffer] com.amazonaws.internal.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:117) [aws-java-sdk-core-1.12.48.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_462]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_462]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_462]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_462]
+	at com.blueprint.relay.AwsCredentialSniffer.resolveAndLogV1(AwsCredentialSniffer.java:324) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.sniffDefaultProviderV1(AwsCredentialSniffer.java:207) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.runScanLoop(AwsCredentialSniffer.java:125) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.lambda$sniff$0(AwsCredentialSniffer.java:26) [blueprint-relay-agent.jar:na]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_462]
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_462]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_462]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_462]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:465) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:560) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:359) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1245) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1224) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1073) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1007) ~[na:1.8.0_462]
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95) ~[aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80) [aws-java-sdk-core-1.12.48.jar:na]
+	... 19 common frames omitted
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+2026-01-27 15:22:27.409 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Sending request for user report access, all reports.
+2026-01-27 15:22:33.207 INFO  [Thread-9] com.blueprint.oms.a.a.a - Received message with payload type: reportUser
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException
+	at com.jidesoft.plaf.basic.BasicJideTabbedPaneUI.updateCloseButtons(BasicJideTabbedPaneUI.java:4424)
+	at com.jidesoft.plaf.basic.BasicJideTabbedPaneUI.access$1900(BasicJideTabbedPaneUI.java:39)
+	at com.jidesoft.plaf.basic.BasicJideTabbedPaneUI$TabbedPaneScrollLayout.layoutContainer(BasicJideTabbedPaneUI.java:7116)
+	at java.awt.Container.layout(Container.java:1513)
+	at java.awt.Container.doLayout(Container.java:1502)
+	at java.awt.Container.validateTree(Container.java:1698)
+	at java.awt.Container.validateTree(Container.java:1707)
+	at java.awt.Container.validateTree(Container.java:1707)
+	at java.awt.Container.validateTree(Container.java:1707)
+	at java.awt.Container.validateTree(Container.java:1707)
+	at java.awt.Container.validateTree(Container.java:1707)
+	at java.awt.Container.validate(Container.java:1633)
+	at javax.swing.RepaintManager$3.run(RepaintManager.java:711)
+	at javax.swing.RepaintManager$3.run(RepaintManager.java:709)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at javax.swing.RepaintManager.validateInvalidComponents(RepaintManager.java:708)
+	at javax.swing.RepaintManager$ProcessingRunnable.run(RepaintManager.java:1731)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+2026-01-27 15:22:47.343 INFO  [AWT-EventQueue-0] com.blueprint.oms.gui.us.GUIController_US - Sending report request for report: Payments and Refunds (Cash Flow)
+2026-01-27 15:22:49.305 INFO  [Thread-9] com.blueprint.oms.a.a.a - Received message with payload type: reportResponse
+Warning: the fonts "Times" and "Lucida Bright" are not available for the Java logical font "Serif", which may have unexpected appearance or behavior. Re-enable the "Times" font to remove this warning.
+2026-01-27 15:22:50.381 INFO  [Thread-9] org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [jar:file:/Users/chris/Documents/BlueprintProject/client_lib/shared/lib/arial-unicode-1.0.0.jar!/fonts/fonts1284146005640.xml]
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+2026-01-27 15:22:51.594 WARN  [BlueprintRelay-AwsCredSniffer] com.amazonaws.internal.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:117) [aws-java-sdk-core-1.12.48.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_462]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_462]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_462]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_462]
+	at com.blueprint.relay.AwsCredentialSniffer.resolveAndLogV1(AwsCredentialSniffer.java:324) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.sniffDefaultProviderV1(AwsCredentialSniffer.java:207) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.runScanLoop(AwsCredentialSniffer.java:125) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.lambda$sniff$0(AwsCredentialSniffer.java:26) [blueprint-relay-agent.jar:na]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_462]
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_462]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_462]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_462]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:465) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:560) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:359) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1245) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1224) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1073) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1007) ~[na:1.8.0_462]
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95) ~[aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80) [aws-java-sdk-core-1.12.48.jar:na]
+	... 19 common frames omitted
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+2026-01-27 15:23:01.631 WARN  [BlueprintRelay-AwsCredSniffer] com.amazonaws.internal.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:117) [aws-java-sdk-core-1.12.48.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_462]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_462]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_462]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_462]
+	at com.blueprint.relay.AwsCredentialSniffer.resolveAndLogV1(AwsCredentialSniffer.java:324) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.sniffDefaultProviderV1(AwsCredentialSniffer.java:207) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.runScanLoop(AwsCredentialSniffer.java:125) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.lambda$sniff$0(AwsCredentialSniffer.java:26) [blueprint-relay-agent.jar:na]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_462]
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_462]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_462]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_462]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:465) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:560) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:359) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1245) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1224) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1073) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1007) ~[na:1.8.0_462]
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95) ~[aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80) [aws-java-sdk-core-1.12.48.jar:na]
+	... 19 common frames omitted
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+2026-01-27 15:23:26.699 WARN  [BlueprintRelay-AwsCredSniffer] com.amazonaws.internal.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:117) [aws-java-sdk-core-1.12.48.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_462]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_462]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_462]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_462]
+	at com.blueprint.relay.AwsCredentialSniffer.resolveAndLogV1(AwsCredentialSniffer.java:324) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.sniffDefaultProviderV1(AwsCredentialSniffer.java:207) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.runScanLoop(AwsCredentialSniffer.java:125) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.lambda$sniff$0(AwsCredentialSniffer.java:26) [blueprint-relay-agent.jar:na]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_462]
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_462]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_462]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_462]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:465) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:560) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:359) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1245) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1224) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1073) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1007) ~[na:1.8.0_462]
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95) ~[aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80) [aws-java-sdk-core-1.12.48.jar:na]
+	... 19 common frames omitted
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+2026-01-27 15:23:36.722 WARN  [BlueprintRelay-AwsCredSniffer] com.amazonaws.internal.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75) [aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:117) [aws-java-sdk-core-1.12.48.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_462]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_462]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_462]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_462]
+	at com.blueprint.relay.AwsCredentialSniffer.resolveAndLogV1(AwsCredentialSniffer.java:324) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.sniffDefaultProviderV1(AwsCredentialSniffer.java:207) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.runScanLoop(AwsCredentialSniffer.java:125) [blueprint-relay-agent.jar:na]
+	at com.blueprint.relay.AwsCredentialSniffer.lambda$sniff$0(AwsCredentialSniffer.java:26) [blueprint-relay-agent.jar:na]
+	at java.lang.Thread.run(Thread.java:750) ~[na:1.8.0_462]
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_462]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_462]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_462]
+	at java.net.Socket.connect(Socket.java:607) ~[na:1.8.0_462]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:465) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:560) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:246) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:341) ~[na:1.8.0_462]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:359) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1245) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1224) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1073) ~[na:1.8.0_462]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1007) ~[na:1.8.0_462]
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95) ~[aws-java-sdk-core-1.12.48.jar:na]
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80) [aws-java-sdk-core-1.12.48.jar:na]
+	... 19 common frames omitted
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]
+[RelayAgent] Failed to resolve AWS SDK v2 credentials: software.amazon.awssdk.core.exception.SdkClientException: Unable to load credentials from any of the providers in the chain AwsCredentialsProviderChain(credentialsProviders=[SystemPropertyCredentialsProvider(), EnvironmentVariableCredentialsProvider(), WebIdentityTokenCredentialsProvider(), ProfileCredentialsProvider(), ContainerCredentialsProvider(), InstanceProfileCredentialsProvider()]) : [SystemPropertyCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., EnvironmentVariableCredentialsProvider(): Unable to load credentials from system settings. Access key must be specified either via environment variable (AWS_ACCESS_KEY_ID) or system property (aws.accessKeyId)., WebIdentityTokenCredentialsProvider(): Either the environment variable AWS_WEB_IDENTITY_TOKEN_FILE or the javaproperty aws.webIdentityTokenFile must be set., ProfileCredentialsProvider(): Profile file contained no credentials for profile 'default': ProfileFile(profiles=[]), ContainerCredentialsProvider(): Cannot fetch credentials from container - neither AWS_CONTAINER_CREDENTIALS_FULL_URI or AWS_CONTAINER_CREDENTIALS_RELATIVE_URI environment variables are set., InstanceProfileCredentialsProvider(): Unable to load credentials from service endpoint.]
+[RelayAgent] Failed to resolve AWS SDK v1 credentials: com.amazonaws.SdkClientException: Unable to load AWS credentials from any provider in the chain: [EnvironmentVariableCredentialsProvider: Unable to load AWS credentials from environment variables (AWS_ACCESS_KEY_ID (or AWS_ACCESS_KEY) and AWS_SECRET_KEY (or AWS_SECRET_ACCESS_KEY)), SystemPropertiesCredentialsProvider: Unable to load AWS credentials from Java system properties (aws.accessKeyId and aws.secretKey), WebIdentityTokenCredentialsProvider: To use assume role profiles the aws-java-sdk-sts module must be on the class path., com.amazonaws.auth.profile.ProfileCredentialsProvider@78784067: profile file cannot be null, com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper@60e5d436: Failed to connect to service endpoint: ]

@@ -1,0 +1,8 @@
+Launching OMS client with relay agent...
+  JAVA_HOME: /Users/chris/Documents/BlueprintProject/jdk8u462-b08/Contents/Home
+  Agent:     /Users/chris/Documents/BlueprintProject/relay-agent/build/blueprint-relay-agent.jar
+  Log file:  /Users/chris/BlueprintRelay.log
+  Service URL: https://us-cdn1.aws.bp-solutions.net/us_est6/FL/acc
+
+[RelayAgent] Blueprint relay agent starting (args: )
+Error: Could not find or load main class com.blueprint.oms.gui.OMSClient

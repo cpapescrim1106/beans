@@ -1,0 +1,116 @@
+{
+  "report_requests": [
+    {
+      "outer": {
+        "Message": "{\n  \"branchId\" : 1269,\n  \"userId\" : 50,\n  \"username\" : \"cpape\",\n  \"reportName\" : \"Payments and Refunds (Cash Flow)\",\n  \"reportFilename\" : null,\n  \"clinicIdentifier\" : null,\n  \"parameterMap\" : null,\n  \"clientId\" : null,\n  \"labelLocaleStr\" : null,\n  \"responseTopicName\" : null,\n  \"responseBrokerHostname\" : null,\n  \"responseQueueName\" : null,\n  \"isHearingClinic\" : true,\n  \"logoFilePath\" : null,\n  \"userDefaultLocationTimeZone\" : null,\n  \"clientFormReportsOnly\" : false,\n  \"reportResultXml\" : \"FL_acc_50_1769562447489\",\n  \"hearingClinic\" : true\n}",
+        "MessageAttributes": {
+          "MESSAGE_PAYLOAD_TYPE_PROPERTY": "reportResponse"
+        }
+      },
+      "message": {
+        "branchId": 1269,
+        "userId": 50,
+        "username": "cpape",
+        "reportName": "Payments and Refunds (Cash Flow)",
+        "reportFilename": null,
+        "clinicIdentifier": null,
+        "parameterMap": null,
+        "clientId": null,
+        "labelLocaleStr": null,
+        "responseTopicName": null,
+        "responseBrokerHostname": null,
+        "responseQueueName": null,
+        "isHearingClinic": true,
+        "logoFilePath": null,
+        "userDefaultLocationTimeZone": null,
+        "clientFormReportsOnly": false,
+        "reportResultXml": "FL_acc_50_1769562447489",
+        "hearingClinic": true
+      }
+    },
+    {
+      "outer": {
+        "Message": "{\n  \"branchId\" : 1269,\n  \"userId\" : 50,\n  \"username\" : \"cpape\",\n  \"reportName\" : \"Payments and Refunds (Cash Flow)\",\n  \"reportFilename\" : null,\n  \"clinicIdentifier\" : null,\n  \"parameterMap\" : null,\n  \"clientId\" : null,\n  \"labelLocaleStr\" : null,\n  \"responseTopicName\" : null,\n  \"responseBrokerHostname\" : null,\n  \"responseQueueName\" : null,\n  \"isHearingClinic\" : true,\n  \"logoFilePath\" : null,\n  \"userDefaultLocationTimeZone\" : null,\n  \"clientFormReportsOnly\" : false,\n  \"reportResultXml\" : \"FL_acc_50_1769562447489\",\n  \"hearingClinic\" : true\n}",
+        "MessageAttributes": {
+          "MESSAGE_PAYLOAD_TYPE_PROPERTY": "reportResponse"
+        }
+      },
+      "message": {
+        "branchId": 1269,
+        "userId": 50,
+        "username": "cpape",
+        "reportName": "Payments and Refunds (Cash Flow)",
+        "reportFilename": null,
+        "clinicIdentifier": null,
+        "parameterMap": null,
+        "clientId": null,
+        "labelLocaleStr": null,
+        "responseTopicName": null,
+        "responseBrokerHostname": null,
+        "responseQueueName": null,
+        "isHearingClinic": true,
+        "logoFilePath": null,
+        "userDefaultLocationTimeZone": null,
+        "clientFormReportsOnly": false,
+        "reportResultXml": "FL_acc_50_1769562447489",
+        "hearingClinic": true
+      }
+    },
+    {
+      "outer": {
+        "Message": "{\n  \"branchId\" : 1269,\n  \"userId\" : 50,\n  \"username\" : \"cpape\",\n  \"reportName\" : \"Payments and Refunds (Cash Flow)\",\n  \"reportFilename\" : null,\n  \"clinicIdentifier\" : null,\n  \"parameterMap\" : null,\n  \"clientId\" : null,\n  \"labelLocaleStr\" : null,\n  \"responseTopicName\" : null,\n  \"responseBrokerHostname\" : null,\n  \"responseQueueName\" : null,\n  \"isHearingClinic\" : true,\n  \"logoFilePath\" : null,\n  \"userDefaultLocationTimeZone\" : null,\n  \"clientFormReportsOnly\" : false,\n  \"reportResultXml\" : \"FL_acc_50_1769567397136\",\n  \"hearingClinic\" : true\n}",
+        "MessageAttributes": {
+          "MESSAGE_PAYLOAD_TYPE_PROPERTY": "reportResponse"
+        }
+      },
+      "message": {
+        "branchId": 1269,
+        "userId": 50,
+        "username": "cpape",
+        "reportName": "Payments and Refunds (Cash Flow)",
+        "reportFilename": null,
+        "clinicIdentifier": null,
+        "parameterMap": null,
+        "clientId": null,
+        "labelLocaleStr": null,
+        "responseTopicName": null,
+        "responseBrokerHostname": null,
+        "responseQueueName": null,
+        "isHearingClinic": true,
+        "logoFilePath": null,
+        "userDefaultLocationTimeZone": null,
+        "clientFormReportsOnly": false,
+        "reportResultXml": "FL_acc_50_1769567397136",
+        "hearingClinic": true
+      }
+    },
+    {
+      "outer": {
+        "Message": "{\n  \"branchId\" : 1269,\n  \"userId\" : 50,\n  \"username\" : \"cpape\",\n  \"reportName\" : \"Payments and Refunds (Cash Flow)\",\n  \"reportFilename\" : null,\n  \"clinicIdentifier\" : null,\n  \"parameterMap\" : null,\n  \"clientId\" : null,\n  \"labelLocaleStr\" : null,\n  \"responseTopicName\" : null,\n  \"responseBrokerHostname\" : null,\n  \"responseQueueName\" : null,\n  \"isHearingClinic\" : true,\n  \"logoFilePath\" : null,\n  \"userDefaultLocationTimeZone\" : null,\n  \"clientFormReportsOnly\" : false,\n  \"reportResultXml\" : \"FL_acc_50_1769567397136\",\n  \"hearingClinic\" : true\n}",
+        "MessageAttributes": {
+          "MESSAGE_PAYLOAD_TYPE_PROPERTY": "reportResponse"
+        }
+      },
+      "message": {
+        "branchId": 1269,
+        "userId": 50,
+        "username": "cpape",
+        "reportName": "Payments and Refunds (Cash Flow)",
+        "reportFilename": null,
+        "clinicIdentifier": null,
+        "parameterMap": null,
+        "clientId": null,
+        "labelLocaleStr": null,
+        "responseTopicName": null,
+        "responseBrokerHostname": null,
+        "responseQueueName": null,
+        "isHearingClinic": true,
+        "logoFilePath": null,
+        "userDefaultLocationTimeZone": null,
+        "clientFormReportsOnly": false,
+        "reportResultXml": "FL_acc_50_1769567397136",
+        "hearingClinic": true
+      }
+    }
+  ]
+}
